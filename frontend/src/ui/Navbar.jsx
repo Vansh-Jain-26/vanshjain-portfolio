@@ -1,41 +1,53 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Navigation = () => {
-  const [activeTab, setActiveTab] = useState('Home');
+  const location = useLocation();
 
-  const tabs = [ 'About','Speaker Sessions', 'Courses', 'Contact', 'Blog'];
+  // Updated tabs to match your specific routes
+  const tabs = [
+    { name: 'About', path: '/about' },
+    { name: 'Speaker Sessions', path: '/sessions' },
+    { name: 'Courses', path: '/courses' },
+    { name: 'Contact', path: '/contact' },
+    { name: 'Blog', path: '/blog' }
+  ];
+
+  // Logic to check if the current URL matches the tab path
+  const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-50 bg-black p-8">
-      {/* Main Container */}
-      <nav className="relative flex flex-col items-center border border-white/10 bg-[#0A0A0A] rounded-xl overflow-hidden shadow-2xl">
+    // Fixed at the top center with z-index to stay above draggable photos
+    <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full flex justify-center pointer-events-none">
+      <nav className="relative flex flex-col items-center border border-white/5 bg-[#0D0D0D]/80 backdrop-blur-md rounded-xl overflow-hidden shadow-2xl pointer-events-auto">
 
-        {/* Top Navigation Links */}
-        <div className="flex items-center px-4 py-3 gap-6">
+        {/* Top Navigation Links - Compact sizing for 75% zoom view */}
+        <div className="flex items-center px-4 py-2 gap-4 md:gap-6">
           {tabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`relative px-2 py-1 text-sm font-semibold transition-colors duration-300 ${activeTab === tab ? 'text-white' : 'text-gray-400 hover:text-gray-200'
+            <Link
+              key={tab.name}
+              to={tab.path}
+              className={`relative px-1 py-1 text-[12px] font-medium transition-colors duration-300 ${isActive(tab.path) ? 'text-white' : 'text-neutral-500 hover:text-neutral-300'
                 }`}
             >
-              {tab}
-              {/* The Dot Indicator */}
-              {activeTab === tab && (
+              {tab.name}
+
+              {/* The Dot Indicator - Animated for smooth transitions */}
+              {isActive(tab.path) && (
                 <motion.div
                   layoutId="activeDot"
-                  className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white rounded-full"
+                  className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 bg-white rounded-full"
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
-            </button>
+            </Link>
           ))}
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="w-full border-t border-white/10 px-8 py-3 bg-white/2">
-          <p className="text-[13px] font-medium text-gray-300 text-center whitespace-nowrap">
+        <div className="w-full border-t border-white/5 px-6 py-1.5 bg-white/[0.02]">
+          <p className="text-[11px] font-medium text-neutral-400 text-center whitespace-nowrap tracking-wide">
             Have something in mind? Let's connect
           </p>
         </div>

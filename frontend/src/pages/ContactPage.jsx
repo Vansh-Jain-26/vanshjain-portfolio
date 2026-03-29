@@ -12,7 +12,7 @@ const ContactPage = () => {
       <div className="bg-[#0a0a0a] text-white min-h-screen font-sans selection:bg-white selection:text-black">
 
         {/* Header Section */}
-        <header className="pt-5 pb-5 px-8 border-b border-dashed border-white/10">
+        <header className="pt-32 pb-16 px-8 border-b border-dashed border-white/10">
           <h1
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
             className="text-[12vw] leading-[0.8] uppercase tracking-tighter"
