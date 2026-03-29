@@ -38,7 +38,7 @@ const AboutPage = () => {
 
             <div className="space-y-6 text-[14px] md:text-[15px] leading-relaxed max-w-120 text-left">
               <p>
-                Hey, I'm <span className="text-white">Abhishek</span>, a full-stack Product Designer with 3+ years of experience creating user-focused digital products across Web3, fintech, and gaming industries.
+                Hey, I'm <span className="text-white">Vansh jain</span>, a full-stack Product Designer with 3+ years of experience creating user-focused digital products across Web3, fintech, and gaming industries.
               </p>
               <p className="opacity-80">
                 My journey into design didn't start in a classroom—it started at a hackathon. While everyone around me was busy coding, I noticed something missing: no one was thinking about the user experience.
