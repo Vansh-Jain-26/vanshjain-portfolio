@@ -141,7 +141,7 @@ const BlogPage = () => {
         </div>
       </div>
 
-      {/* Full Width Grid */}
+
       <main className="p-8 md:p-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
         {posts.map((post) => (
           <article key={post.id} className="group cursor-pointer" onClick={() => { setSelectedPost(post); window.scrollTo(0, 0); }}>
