@@ -8,7 +8,7 @@ const Navigation = () => {
   // Updated tabs to match your specific routes
   const tabs = [
     { name: 'About', path: '/about' },
-    { name: 'Speaker Sessions', path: '/sessions' },
+    { name: 'Speaker Sessions', path: '/speaker-sessions' },
     { name: 'Courses', path: '/courses' },
     { name: 'Contact', path: '/contact' },
     { name: 'Blog', path: '/blog' }
@@ -46,7 +46,7 @@ const Navigation = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="w-full border-t border-white/5 px-6 py-1.5 bg-white/[0.02]">
+        <div className="w-full border-t border-white/5 px-6 py-1.5 bg-white/2">
           <p className="text-[11px] font-medium text-neutral-400 text-center whitespace-nowrap tracking-wide">
             Have something in mind? Let's connect
           </p>
