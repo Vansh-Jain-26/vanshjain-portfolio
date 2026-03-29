@@ -6,10 +6,11 @@ import HomePage from './pages/HomePage';
 import Footer from './ui/Footer';
 import ContactPage from './pages/ContactPage';
 import BlogsPage from './pages/BlogsPage';
-// Placeholder components for the ones you haven't imported yet
+
+
 const SessionsPage = () => <h1>Speaker Sessions</h1>;
 const NotFound = () => <h1>404 - Page Not Found</h1>;
-const CoursesPage = () => <h1>404 - Page Not Found</h1>;
+
 
 function App() {
   return (
