@@ -104,7 +104,7 @@ const BlogPage = () => {
 
   // --- MODERN LISTING VIEW ---
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen selection:bg-white selection:text-black">
+    <div className="bg-[#0a0a0a] text-white min-h-screen selection:bg-white selection:text-black pt-10">
       <style>
         {`@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');`}
       </style>
@@ -112,7 +112,7 @@ const BlogPage = () => {
       {/* Hero Header */}
       <header className="pt-24 pb-12 px-8 md:px-16 text-center">
         <h1 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-[15vw] md:text-[12vw] leading-none uppercase tracking-tighter mb-4">
-          Journal
+          Blog
         </h1>
         <p className="text-neutral-500 uppercase tracking-[0.3em] text-[10px]">Thoughts, ideas and stories</p>
       </header>
