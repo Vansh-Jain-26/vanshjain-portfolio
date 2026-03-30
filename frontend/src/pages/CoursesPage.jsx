@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   Star
 } from 'lucide-react';
+import DesignProcess from './Step';
 
 const CoursesPage = () => {
   const courses = [
@@ -123,7 +124,8 @@ const CoursesPage = () => {
       </section>
 
       {/* SECTION 4: HOW IT WORKS */}
-      <section className="bg-white text-black py-24 px-8 md:px-16">
+      <DesignProcess/>
+      {/* <section className="bg-white text-black py-24 px-8 md:px-16">
         <div className="max-w-6xl mx-auto">
           <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-7xl mb-20 text-center tracking-tighter italic">How It Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
@@ -138,7 +140,7 @@ const CoursesPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 5: WHY LEARN FROM ME */}
       <section className="py-24 px-8 md:px-16">
