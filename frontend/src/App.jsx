@@ -8,7 +8,7 @@ import ContactPage from './pages/ContactPage';
 import BlogsPage from './pages/BlogsPage';
 import CoursesPage from './pages/CoursesPage';
 import SessionsPage from './pages/SessionsPage';
-
+import ScrollToTop from './ui/ScrollToTop';
 const NotFound = () => <h1>404 - Page Not Found</h1>;
 
 
@@ -18,6 +18,7 @@ function App() {
       <Navigation />
       
       <div className="content-container">
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
