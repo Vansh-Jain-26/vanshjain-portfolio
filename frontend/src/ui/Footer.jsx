@@ -7,7 +7,8 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 border-b border-white/10">
         <div className="p-6  border-white/10 text-left">
           <h3 className="font-bold text-lg mb-2">Get in touch</h3>
-          <p className="text-gray-500 text-sm">Send an email or DM and I'll get back to you.</p>
+          <p className="text-gray-500 text-sm">            <p>© 2026 All Rights Reserved</p>
+</p>
         </div>
         <div className="p-8 flex items-center justify-end gap-3">
           {/* Using generic icons to ensure no "Module not found" errors */}
