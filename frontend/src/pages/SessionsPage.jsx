@@ -11,6 +11,8 @@ import {
   School,
   Globe
 } from 'lucide-react';
+import CountUp from 'react-countup';
+
 
 const SessionsPage = () => {
   const [schoolFilter, setSchoolFilter] = useState('');
@@ -67,9 +69,9 @@ const SessionsPage = () => {
       </style>
 
       {/* SECTION 1: HERO BANNER */}
-      <section className="pt-32 pb-20 px-8 md:px-16 border-b border-white/5">
+      <section className="pt-40 pb-20 px-8 md:px-16 border-b border-white/5">
         <div className="max-w-4xl">
-          <h1 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-[12vw] md:text-[8vw] leading-[0.8] uppercase tracking-tighter mb-8">
+          <h1 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-[12vw] md:text-[6vw] leading-[0.8] uppercase tracking-tighter mb-8">
             Speaking <br /><span className="italic">Sessions</span>
           </h1>
           <p className="text-neutral-400 text-lg md:text-xl max-w-2xl leading-relaxed">
@@ -105,7 +107,7 @@ const SessionsPage = () => {
           </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
+            <table className="w-full text-left border-collapse overflow-hidden">
               <thead>
                 <tr className="border-b border-white/20 text-[10px] uppercase tracking-widest text-neutral-500">
                   <th className="py-4 font-medium">School Name</th>
@@ -117,12 +119,25 @@ const SessionsPage = () => {
               </thead>
               <tbody className="text-sm">
                 {[1, 2, 3].map((_, i) => (
-                  <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors group">
-                    <td className="py-6 font-medium">Delhi Public School</td>
-                    <td className="py-6 text-neutral-400">New Delhi</td>
-                    <td className="py-6 text-neutral-400">Class 9-12</td>
-                    <td className="py-6 text-neutral-400">Ideation Workshop</td>
-                    <td className="py-6 text-neutral-400">Oct 2025</td>
+                  <tr key={i} className="relative border-b border-white/5 group overflow-hidden">
+                    {/* The Animated Bar */}
+                    <div className="absolute left-0 top-0 bottom-0 w-0 bg-blue-600 transition-all duration-500 ease-in-out group-hover:w-1 " />
+
+                    <td className="py-6 font-medium transition-transform duration-500 group-hover:translate-x-4 over">
+                      Delhi Public School
+                    </td>
+                    <td className="py-6 text-neutral-400 transition-transform duration-500 group-hover:translate-x-4">
+                      New Delhi
+                    </td>
+                    <td className="py-6 text-neutral-400 transition-transform duration-500 group-hover:translate-x-4">
+                      Class 9-12
+                    </td>
+                    <td className="py-6 text-neutral-400 transition-transform duration-500 group-hover:translate-x-4">
+                      Ideation Workshop
+                    </td>
+                    <td className="py-6 text-neutral-400 transition-transform duration-500 group-hover:translate-x-4">
+                      Oct 2025
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -152,16 +167,32 @@ const SessionsPage = () => {
         <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-7xl mb-16 tracking-tighter">Upcoming Engagements</h2>
         <div className="space-y-6">
           {upcomingEvents.map((event, i) => (
-            <div key={i} className="flex flex-col md:flex-row items-start md:items-center justify-between border-b border-black/10 pb-8 gap-6 group">
-              <div className="space-y-2">
-                <span className="bg-black text-white text-[9px] px-2 py-1 uppercase tracking-tighter font-bold">Upcoming</span>
-                <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">{event.name}</h3>
-                <div className="flex flex-wrap gap-6 text-sm text-neutral-600 uppercase tracking-widest">
+            <div
+              key={i}
+              className="group relative flex flex-col md:flex-row items-start md:items-center justify-between border-b border-black/10 pb-8 gap-6 p-6 transition-all duration-700 ease-in-out
+                 bg-linear-to-t from-black from-50% to-transparent to-50% 
+                 bg-size-[100%_200%] bg-position-[0_0] hover:bg-position-[0_100%]"
+            >
+              <div className="relative z-10 space-y-2">
+                {/* Badge: Inverts on hover */}
+                <span className="bg-black text-white group-hover:bg-white group-hover:text-black text-[9px] px-2 py-1 uppercase tracking-tighter font-bold transition-all duration-500">
+                  Upcoming
+                </span>
+
+                {/* Title: Transitions to white */}
+                <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter transition-colors duration-500 group-hover:text-white">
+                  {event.name}
+                </h3>
+
+                {/* Meta Info */}
+                <div className="flex flex-wrap gap-6 text-sm text-neutral-600 uppercase tracking-widest transition-colors duration-500 group-hover:text-neutral-400">
                   <span className="flex items-center gap-2"><Calendar size={14} /> {event.date}</span>
                   <span className="flex items-center gap-2"><MapPin size={14} /> {event.venue}, {event.city}</span>
                 </div>
               </div>
-              <button className="bg-black text-white px-8 py-4 text-[10px] uppercase tracking-[0.2em] hover:bg-blue-600 transition-all flex items-center gap-3">
+
+              {/* Button: Inverts on hover */}
+              <button className="relative z-10 bg-black text-white px-8 py-4 text-[10px] uppercase tracking-[0.2em] transition-all duration-500 flex items-center gap-3 group-hover:bg-white group-hover:text-black border border-transparent group-hover:border-white">
                 Register Now <ArrowRight size={14} />
               </button>
             </div>
@@ -170,66 +201,286 @@ const SessionsPage = () => {
       </section>
 
       {/* SECTION 5: LIVE SESSIONS */}
-      <section className="p-8 md:p-16">
-        <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl mb-12">Digital Archive</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <section className="p-6 md:p-12 lg:p-20 bg-[#FBFBFB]">
+        <div className="mb-16 text-center">
+          <h2
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-light text-neutral-900 tracking-tight"
+          >
+            Digital Archive
+          </h2>
+          <p className="text-neutral-500 mt-4 text-sm uppercase tracking-widest">
+            Curated Sessions & Live Recordings
+          </p>
+        </div>
+
+        {/* Pinterest-style Masonry/Columns */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
           {liveSessions.map((live, i) => (
-            <div key={i} className="group cursor-pointer">
-              <div className="relative aspect-video overflow-hidden mb-6">
-                <img src={live.thumbnail} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <PlayCircle size={60} className="text-white opacity-80 group-hover:scale-110 transition-transform" />
+            <div
+              key={i}
+              className="break-inside-avoid group cursor-pointer bg-white p-4 rounded-3xl border border-neutral-100/50 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-in-out"
+            >
+              {/* Modern Image Container with soft corners */}
+              <div className="relative aspect-5/5 overflow-hidden rounded-2xl mb-5">
+                {/* Subtle Image Reveal (Starts soft focus) */}
+                <img
+                  src={live.thumbnail}
+                  className="w-full h-full object-cover    transition-all duration-700 ease-in-out"
+                />
+
+                {/* Modern Play Button: Integrated, not a heavy overlay */}
+                <div className="absolute bottom-4 right-4 bg-white/60 backdrop-blur-sm p-3 rounded-full shadow-inner opacity-80 group-hover:opacity-100 transition-opacity">
+                  <PlayCircle
+                    size={24}
+                    className="text-neutral-900"
+                    strokeWidth={1.5}
+                  />
                 </div>
-                <div className="absolute top-4 left-4 bg-red-600 text-white text-[10px] px-2 py-1 font-bold uppercase tracking-widest">
+
+                {/* Platform Tag: Minimalist and positioned bottom-left */}
+                <div className="absolute bottom-4 left-4 bg-black/80 text-white text-[9px] px-3 py-1.5 rounded-full font-medium uppercase tracking-widest scale-90 group-hover:scale-100 transition-transform duration-300">
                   {live.platform}
                 </div>
               </div>
-              <h4 className="text-xl mb-1">{live.title}</h4>
-              <p className="text-xs text-neutral-500 uppercase tracking-widest">{live.date}</p>
+
+              {/* Text Details: Focused on typography */}
+              <div className="px-1 pb-2">
+                <h4 className="text-lg font-medium text-neutral-900 leading-snug mb-1 group-hover:text-red-700 transition-colors">
+                  {live.title}
+                </h4>
+                <div className="flex items-center justify-between mt-3 text-xs text-neutral-500 uppercase tracking-widest">
+                  <p>{live.date}</p>
+                  {/* Minimalist interactive hint */}
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-red-600 font-bold">
+                    View →
+                  </span>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
       {/* SECTION 6: EVENT PORTFOLIO */}
-      <section className="p-8 md:p-16 bg-neutral-900/50 border-y border-white/5">
-        <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl mb-16 text-center">Moments on Stage</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[1, 2, 3].map((_, i) => (
-            <div key={i} className="space-y-4">
-              <div className="grid grid-cols-2 gap-2 h-64">
-                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=400" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all cursor-crosshair" />
-                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=400" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all cursor-crosshair" />
-              </div>
-              <div>
-                <h4 className="font-bold text-sm uppercase tracking-widest">Global Leadership Summit</h4>
-                <p className="text-xs text-neutral-500">Oct 2025 • Main Auditorium</p>
-              </div>
+      <section className="py-24 bg-white overflow-hidden">
+        {/* Header Section */}
+        <div className="px-8 md:px-16 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="max-w-2xl">
+            <h2
+              style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              className="text-6xl md:text-7xl text-neutral-900 leading-tight"
+            >
+              Moments on Stage
+            </h2>
+            <div className="flex items-center gap-4 mt-6">
+              <span className="h-[1px] w-12 bg-neutral-900"></span>
+              <p className="text-neutral-500 text-xs uppercase tracking-[0.4em]">
+                The Live Experience
+              </p>
             </div>
-          ))}
+          </div>
+          <div className="text-neutral-400 italic text-sm font-serif">
+            Drifting through 2025 —
+          </div>
+        </div>
+
+        {/* The Auto-Scrolling Container */}
+        <div className="relative flex">
+          {/* We duplicate the content twice to create a seamless loop.
+      'animate-infinite-scroll' is the custom animation.
+    */}
+          <div className="flex animate-infinite-scroll hover:[animation-play-state:paused] cursor-pointer">
+            {[1, 2, 3, 4, 1, 2, 3, 4].map((item, i) => (
+              <div
+                key={i}
+                className="flex-none w-[350px] md:w-[500px] px-4 group"
+              >
+                {/* Pinterest-style Multi-Image Card */}
+                <div className="relative space-y-4">
+                  <div className="grid grid-cols-10 gap-3 h-[400px]">
+                    {/* Main Large Image */}
+                    <div className="col-span-6 rounded-3xl overflow-hidden shadow-sm group-hover:shadow-2xl transition-all duration-700">
+                      <img
+                        src={`https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600&sig=${i}`}
+                        className="w-full h-full object-cover   group-hover:scale-110 transition-all duration-1000 ease-in-out"
+                      />
+                    </div>
+                    {/* Side Stack */}
+                    <div className="col-span-4 flex flex-col gap-3">
+                      <div className="h-3/5 rounded-3xl overflow-hidden">
+                        <img
+                          src={`https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=400&sig=${i + 10}`}
+                          className="w-full h-full object-cover  transition-all duration-700"
+                        />
+                      </div>
+                      <div className="h-2/5 bg-neutral-100 rounded-3xl flex items-end p-4 group-hover:bg-red-50 transition-colors">
+                        <span className="text-neutral-300 group-hover:text-red-200 text-4xl font-serif">0{i + 1}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Content Details */}
+                  <div className="pt-2">
+                    <h4 className="text-xl font-light text-neutral-900 tracking-tight font-serif">
+                      Global Leadership Summit
+                    </h4>
+                    <p className="text-[10px] text-neutral-400 uppercase tracking-widest mt-1">
+                      Oct 2025 • Main Auditorium
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Custom CSS for the Animation */}
+        <style jsx>{`
+    @keyframes infinite-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .animate-infinite-scroll {
+      animation: infinite-scroll 40s linear infinite;
+      display: flex;
+      width: max-content;
+    }
+  `}</style>
+      </section>
+
+      <section className="py-32 px-8 md:px-16 bg-[#0a0a0a] overflow-hidden">
+        <div className="max-w-7xl mx-auto relative">
+
+          {/* Large Background Decorative Text - Very Subtle Dark Gray */}
+          <div
+            className="absolute -top-16 -left-10 text-[10rem] md:text-[15rem] font-serif opacity-[0.02] select-none pointer-events-none text-white"
+            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          >
+            Voices
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-16 items-start relative z-10">
+
+            {/* Left Side: Editorial Header */}
+            <div className="lg:w-1/3 lg:sticky lg:top-32">
+              <h2
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                className="text-6xl md:text-7xl italic leading-tight text-white"
+              >
+                Voice of the <br />
+                <span className="text-red-500 not-italic font-sans text-xs uppercase tracking-[0.6em] block mt-6 font-bold">
+                  Audience
+                </span>
+              </h2>
+              <div className="h-[1px] w-20 bg-red-900/50 mt-8"></div>
+              <p className="mt-8 text-neutral-500 text-sm max-w-xs leading-relaxed tracking-wide italic">
+                "The most profound impact is the echo left in the room after the speaker departs."
+              </p>
+            </div>
+
+            {/* Right Side: Floating Asymmetric Cards */}
+            <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-10 md:pt-24">
+
+              {/* Testimonial 1 - Glassmorphism Card (Shifted Up) */}
+              <div className="group relative bg-neutral-900/40 backdrop-blur-sm border border-white/5 p-10 rounded-[3rem] shadow-2xl transition-all duration-700 md:-translate-y-20 hover:-translate-y-22 hover:bg-neutral-900/60">
+                <div className="mb-6 flex justify-between items-center">
+                  <span className="text-6xl text-red-500/20 font-serif group-hover:text-red-500 transition-colors duration-500">“</span>
+                  <div className="h-px w-12 bg-white/10"></div>
+                </div>
+
+                <p className="text-xl text-neutral-200 leading-relaxed font-light mb-10 italic group-hover:text-white transition-colors">
+                  "The energy brought to the classroom was infectious. Our students are still talking about the <span className="text-red-400 not-italic font-medium">'Idea-to-Action'</span> framework."
+                </p>
+
+                <div className="flex items-center gap-4">
+                  <div className="h-11 w-11 rounded-full bg-gradient-to-tr from-neutral-800 to-neutral-700 border border-white/10 flex items-center justify-center text-white font-serif italic text-sm">
+                    SJ
+                  </div>
+                  <div>
+                    <p className="font-bold text-white text-sm tracking-tight">Dr. Sarah Johnson</p>
+                    <p className="text-[10px] text-neutral-500 uppercase tracking-[0.2em] mt-1">Principal, St. Peters Academy</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 2 - Solid Dark Card (Shifted Down) */}
+              <div className="group relative bg-[#121212] border border-white/5 p-10 rounded-[3rem] shadow-2xl transition-all duration-700 translate-y-0 hover:-translate-y-2">
+                <div className="absolute top-0 right-10 transform -translate-y-1/2">
+                  <div className="bg-red-600 text-white text-[9px] font-black px-4 py-1 rounded-full tracking-tighter uppercase">Impact</div>
+                </div>
+
+                <div className="mb-6">
+                  <span className="text-6xl text-white/5 font-serif group-hover:text-red-500 transition-colors duration-500">“</span>
+                </div>
+
+                <p className="text-xl text-neutral-300 leading-relaxed font-light mb-10 italic group-hover:text-neutral-100 transition-colors">
+                  "Finally a speaker who doesn't just lecture but actually listens and engages with the youth on their level."
+                </p>
+
+                <div className="flex items-center gap-4 border-t border-white/5 pt-8">
+                  <div className="relative">
+                    <div className="h-12 w-12 rounded-full bg-neutral-800 border border-red-500/30 group-hover:border-red-500 transition-all duration-500"></div>
+                    <div className="absolute inset-0 flex items-center justify-center text-white text-xs font-bold uppercase">RV</div>
+                  </div>
+                  <div>
+                    <p className="font-bold text-white text-sm tracking-tight">Rahul Verma</p>
+                    <p className="text-[10px] text-neutral-500 uppercase tracking-[0.2em] mt-1">IIT-D President</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* SECTION 7: TESTIMONIALS */}
-      <section className="py-24 px-8 md:px-16 text-center max-w-5xl mx-auto">
-        <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl italic mb-16">Voice of the Audience</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
-          <div className="border border-white/10 p-8 space-y-4 relative">
-            <span className="text-6xl text-white/10 absolute top-4 right-8 font-serif">"</span>
-            <p className="text-neutral-300 italic">"The energy brought to the classroom was infectious. Our students are still talking about the 'Idea-to-Action' framework."</p>
-            <div>
-              <p className="font-bold text-sm">Dr. Sarah Johnson</p>
-              <p className="text-[10px] text-neutral-500 uppercase tracking-widest">Principal, St. Peters Academy</p>
+
+      <section className="py-10 px-8 md:px-16 bg-[#0a0a0a]">
+        <div className="max-w-5xl mx-auto">
+          {/* The Main CTA Card */}
+          <div className="relative overflow-hidden bg-neutral-900 border border-white/5 rounded-[3rem] p-12 md:p-15 text-center group">
+
+            {/* Animated Background Gradient - Subtle Movement */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(185,28,28,0.15),transparent_50%)] group-hover:bg-[radial-gradient(circle_at_50%_120%,rgba(185,28,28,0.25),transparent_50%)] transition-all duration-700"></div>
+
+            {/* Content Layer */}
+            <div className="relative z-10 space-y-8">
+              <h3
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                className="text-5xl md:text-6xl text-white font-light leading-tight"
+              >
+                Ready to spark <br />
+                <span className="italic text-red-500">the next conversation?</span>
+              </h3>
+
+              <p className="text-neutral-400 text-sm md:text-sm max-w-lg mx-auto uppercase tracking-[0.3em] font-light">
+                Available for Keynotes • Workshops • Strategy
+              </p>
+
+              {/* The "Pinterest Modern" Button */}
+              <div className="pt-8 flex flex-col md:flex-row items-center justify-center gap-6">
+                <button className="relative group/btn px-8 py-4 bg-white text-black rounded-full font-bold text-sm uppercase tracking-widest overflow-hidden transition-all hover:scale-105 active:scale-95">
+                  <span className="relative z-10">Book a Session</span>
+                  <div className="absolute inset-0 bg-red-600 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
+                </button>
+
+                <button className="px-8 py-4 border border-white/10 text-white rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white/5 transition-all">
+                  Get the Media Kit
+                </button>
+              </div>
+            </div>
+
+            {/* Decorative Floating Elements (Pinterest aesthetic) */}
+            <div className="absolute top-10 left-10 text-white/5 font-serif italic text-8xl select-none group-hover:-translate-y-2 transition-transform duration-1000">
+              “
+            </div>
+            <div className="absolute bottom-10 right-10 text-white/5 font-serif italic text-8xl select-none group-hover:translate-y-2 transition-transform duration-1000">
+              ”
             </div>
           </div>
-          <div className="border border-white/10 p-8 space-y-4 relative">
-            <span className="text-6xl text-white/10 absolute top-4 right-8 font-serif">"</span>
-            <p className="text-neutral-300 italic">"Finally a speaker who doesn't just lecture but actually listens and engages with the youth on their level."</p>
-            <div>
-              <p className="font-bold text-sm">Rahul Verma</p>
-              <p className="text-[10px] text-neutral-500 uppercase tracking-widest">Student Council President, IIT-D</p>
-            </div>
-          </div>
+
+
         </div>
       </section>
     </div>
