@@ -502,11 +502,18 @@ const SessionsPage = () => {
 
         {/* The Auto-Scrolling Container */}
         <div className="relative flex">
-          {/* We duplicate the content twice to create a seamless loop.
-      'animate-infinite-scroll' is the custom animation.
-    */}
           <div className="flex animate-infinite-scroll hover:[animation-play-state:paused] cursor-pointer">
-            {[1, 2, 3, 4, 1, 2, 3, 4].map((item, i) => (
+            {[
+              { id: 1, title: "AI & LinkedIn Masterclass", context: "July 2025 • Growell Girls", img: "Event1.webp" },
+              { id: 4, title: "Unlocking Human OS", context: "Aug 2025 • Doon School", img: "Event4.webp" },
+              { id: 12, title: "Cyber Shield Masterclass", context: "Sept 2025 • KV Baoli", img: "Event12.jpg" },
+              { id: 15, title: "Vertex AI Bootcamp", context: "Sept 2025 • KIET Group", img: "Event15.webp" },
+              // Duplicating for seamless loop
+              { id: 1, title: "AI & LinkedIn Masterclass", context: "July 2025 • Growell Girls", img: "Event1.webp" },
+              { id: 4, title: "Unlocking Human OS", context: "Aug 2025 • Doon School", img: "Event4.webp" },
+              { id: 12, title: "Cyber Shield Masterclass", context: "Sept 2025 • KV Baoli", img: "Event12.jpg" },
+              { id: 15, title: "Vertex AI Bootcamp", context: "Sept 2025 • KIET Group", img: "Event15.webp" },
+            ].map((item, i) => (
               <div
                 key={i}
                 className="flex-none w-87.5 md:w-125 px-4 group"
@@ -515,22 +522,25 @@ const SessionsPage = () => {
                 <div className="relative space-y-4">
                   <div className="grid grid-cols-10 gap-3 h-100">
                     {/* Main Large Image */}
-                    <div className="col-span-6 rounded-3xl overflow-hidden shadow-sm group-hover:shadow-2xl transition-all duration-700">
+                    <div className="col-span-6 rounded-3xl overflow-hidden shadow-sm group-hover:shadow-2xl transition-all duration-700 bg-neutral-100">
                       <img
-                        src={`https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600&sig=${i}`}
-                        className="w-full h-full object-cover   group-hover:scale-110 transition-all duration-1000 ease-in-out"
+                        src={`./src/assets/events/${item.img}`}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000 ease-in-out"
+                        alt={item.title}
+                        onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600'; }}
                       />
                     </div>
                     {/* Side Stack */}
                     <div className="col-span-4 flex flex-col gap-3">
-                      <div className="h-3/5 rounded-3xl overflow-hidden">
+                      <div className="h-3/5 rounded-3xl overflow-hidden bg-neutral-100">
                         <img
-                          src={`https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=400&sig=${i + 10}`}
-                          className="w-full h-full object-cover  transition-all duration-700"
+                          // Small supporting image (using same source or different if you have them)
+                          src={`./src/assets/events/${item.img}`}
+                          className="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0"
                         />
                       </div>
-                      <div className="h-2/5 bg-neutral-100 rounded-3xl flex items-end p-4 group-hover:bg-red-50 transition-colors">
-                        <span className="text-neutral-300 group-hover:text-red-200 text-4xl font-serif">0{i + 1}</span>
+                      <div className="h-2/5 bg-neutral-50 rounded-3xl flex items-end p-4 group-hover:bg-red-50 transition-colors">
+                        <span className="text-neutral-200 group-hover:text-red-300 text-4xl font-serif">0{i + 1}</span>
                       </div>
                     </div>
                   </div>
@@ -538,10 +548,10 @@ const SessionsPage = () => {
                   {/* Content Details */}
                   <div className="pt-2">
                     <h4 className="text-xl font-light text-neutral-900 tracking-tight font-serif">
-                      Global Leadership Summit
+                      {item.title}
                     </h4>
                     <p className="text-[10px] text-neutral-400 uppercase tracking-widest mt-1">
-                      Oct 2025 • Main Auditorium
+                      {item.context}
                     </p>
                   </div>
                 </div>
@@ -550,7 +560,6 @@ const SessionsPage = () => {
           </div>
         </div>
 
-        {/* Custom CSS for the Animation */}
         <style jsx>{`
     @keyframes infinite-scroll {
       from { transform: translateX(0); }
