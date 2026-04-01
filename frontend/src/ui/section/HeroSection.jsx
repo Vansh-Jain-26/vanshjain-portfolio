@@ -30,9 +30,9 @@ const HeroSection = () => {
             {/* Portrait Container */}
             <div className="aspect-4/5 rounded-2xl overflow-hidden border border-white/5 relative z-10 bg-neutral-900 shadow-2xl">
               <img
-                src="/vansh-hero.jpg"
+                src="./src/assets/vanshjain.webp"
                 alt="Vansh"
-                className="w-full h-full object-cover grayscale contrast-110 brightness-90 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
+                className="w-full h-full object-cover  contrast-110 brightness-90 scale-110 transition-all duration-1000 ease-out"
               />
             </div>
 
@@ -72,9 +72,9 @@ const HeroSection = () => {
             <p className="text-neutral-300 text-sm sm:text-base font-medium mb-3">
               Founder & CEO at <span className="text-white border-b border-white/10">Kattalyx Labs</span> | <span className="text-white border-b border-white/10">Elite Verse Solutions</span>
             </p>
-            <p className="text-neutral-500 text-xs sm:text-sm leading-relaxed">
+            {/* <p className="text-neutral-500 text-xs sm:text-sm leading-relaxed">
               I build systems that solve real problems. Whether reimagining education or helping founders scale, I thrive on execution and creating lasting impact.
-            </p>
+            </p> */}
           </div>
 
           {/* Impact Stats (More minimal) */}
