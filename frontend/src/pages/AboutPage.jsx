@@ -558,49 +558,49 @@ const AboutPage = () => {
           <div className="columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
             {[
               {
-                img: "Event1.jpg", // Yahan apna exact filename daalein
+                img: "Event1.webp", // Yahan apna exact filename daalein
                 aspect: "aspect-[3/4]",
                 label: "AI & LinkedIn Masterclass",
                 venue: "Growell Girls School"
               },
               {
-                img: "Event2.jpg",
+                img: "Event2.webp",
                 aspect: "aspect-square",
                 label: "Faculty AI Training",
                 venue: "Growell CoEd"
               },
               {
-                img: "Event3.jpg",
+                img: "Event3.webp",
                 aspect: "aspect-[4/5]",
                 label: "Startup Conference",
                 venue: "Growell CoEd"
               },
               {
-                img: "Event11.jpg",
+                img: "Event11.webp",
                 aspect: "aspect-video",
                 label: "Unlocking Human OS",
                 venue: "Doon School"
               },
               {
-                img: "Event12.jpeg",
+                img: "Event12.webp",
                 aspect: "aspect-[2/3]",
                 label: "The DeCode: Cyber Awareness",
                 venue: "Growell Girls School"
               },
               {
-                img: "Event15.jpeg",
+                img: "Event15.webp",
                 aspect: "aspect-square",
                 label: "The Human Toolkit",
                 venue: "Kidzee School"
               },
               {
-                img: "Event16.jpeg",
+                img: "Event16.webp",
                 aspect: "aspect-video",
                 label: "HackProof: Live Simulation",
                 venue: "Growell Co-ed"
               },
               {
-                img: "Event12.jpeg",
+                img: "Event12.webp",
                 aspect: "aspect-[3/4]",
                 label: "The Cadet Code",
                 venue: "Saifia Institute"
