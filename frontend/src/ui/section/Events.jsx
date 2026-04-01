@@ -75,9 +75,9 @@ export default function Events() {
                 <span>←</span> Back to Gallery
               </button>
 
-              <div className="relative aspect-[21/9] rounded-[4rem] overflow-hidden mb-20 border border-white/5">
+              <div className="relative aspect-21/9 rounded-[4rem] overflow-hidden mb-20 border border-white/5">
                 <motion.img layoutId={`img-${selectedEvent.id}`} src={selectedEvent.imgUrl} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-90" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#050505] via-transparent to-transparent opacity-90" />
                 <div className="absolute bottom-12 left-12 md:left-24">
                   <h1 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-6xl md:text-8xl italic tracking-tighter">
                     {selectedEvent.title}
@@ -109,7 +109,7 @@ export default function Events() {
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-white/5 pt-16">
                     {selectedEvent.objectives.map((obj, i) => (
-                      <div key={i} className="p-8 rounded-[2rem] bg-neutral-900/10 border border-white/5">
+                      <div key={i} className="p-8 rounded-4xl bg-neutral-900/10 border border-white/5">
                         <p className="text-neutral-400 text-sm leading-relaxed">{obj}</p>
                       </div>
                     ))}
