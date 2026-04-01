@@ -597,7 +597,7 @@ const SessionsPage = () => {
             {/* Right Side: Floating Asymmetric Cards */}
             <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-10 md:pt-24">
 
-              {/* Testimonial 1 - Glassmorphism Card (Shifted Up) */}
+              {/* Testimonial 1 - Focus on Educational Leadership (Shifted Up) */}
               <div className="group relative bg-neutral-900/40 backdrop-blur-sm border border-white/5 p-10 rounded-[3rem] shadow-2xl transition-all duration-700 md:-translate-y-20 hover:-translate-y-22 hover:bg-neutral-900/60">
                 <div className="mb-6 flex justify-between items-center">
                   <span className="text-6xl text-red-500/20 font-serif group-hover:text-red-500 transition-colors duration-500">“</span>
@@ -605,24 +605,24 @@ const SessionsPage = () => {
                 </div>
 
                 <p className="text-xl text-neutral-200 leading-relaxed font-light mb-10 italic group-hover:text-white transition-colors">
-                  "The energy brought to the classroom was infectious. Our students are still talking about the <span className="text-red-400 not-italic font-medium">'Idea-to-Action'</span> framework."
+                  "The masterclass on <span className="text-red-400 not-italic font-medium">AI & Digital Ethics</span> was transformative. Vansh has a rare ability to simplify complex tech for both students and faculty alike."
                 </p>
 
                 <div className="flex items-center gap-4">
                   <div className="h-11 w-11 rounded-full bg-linear-to-tr from-neutral-800 to-neutral-700 border border-white/10 flex items-center justify-center text-white font-serif italic text-sm">
-                    SJ
+                    GS
                   </div>
                   <div>
-                    <p className="font-bold text-white text-sm tracking-tight">Dr. Sarah Johnson</p>
-                    <p className="text-[10px] text-neutral-500 uppercase tracking-[0.2em] mt-1">Principal, St. Peters Academy</p>
+                    <p className="font-bold text-white text-sm tracking-tight">Principal</p>
+                    <p className="text-[10px] text-neutral-500 uppercase tracking-[0.2em] mt-1">Growell Girls School, Baghpat</p>
                   </div>
                 </div>
               </div>
 
-              {/* Testimonial 2 - Solid Dark Card (Shifted Down) */}
+              {/* Testimonial 2 - Focus on Student Impact & AI (Shifted Down) */}
               <div className="group relative bg-[#121212] border border-white/5 p-10 rounded-[3rem] shadow-2xl transition-all duration-700 translate-y-0 hover:-translate-y-2">
                 <div className="absolute top-0 right-10 transform -translate-y-1/2">
-                  <div className="bg-red-600 text-white text-[9px] font-black px-4 py-1 rounded-full tracking-tighter uppercase">Impact</div>
+                  <div className="bg-red-600 text-white text-[9px] font-black px-4 py-1 rounded-full tracking-tighter uppercase">9.8/10 Rating</div>
                 </div>
 
                 <div className="mb-6">
@@ -630,17 +630,17 @@ const SessionsPage = () => {
                 </div>
 
                 <p className="text-xl text-neutral-300 leading-relaxed font-light mb-10 italic group-hover:text-neutral-100 transition-colors">
-                  "Finally a speaker who doesn't just lecture but actually listens and engages with the youth on their level."
+                  "Finally a founder who bridges the gap between <span className="text-red-400 not-italic font-medium">Habits and Purpose</span>. The IKIGAI session at Takshashila was the highlight of our academic year."
                 </p>
 
                 <div className="flex items-center gap-4 border-t border-white/5 pt-8">
                   <div className="relative">
                     <div className="h-12 w-12 rounded-full bg-neutral-800 border border-red-500/30 group-hover:border-red-500 transition-all duration-500"></div>
-                    <div className="absolute inset-0 flex items-center justify-center text-white text-xs font-bold uppercase">RV</div>
+                    <div className="absolute inset-0 flex items-center justify-center text-white text-xs font-bold uppercase">KL</div>
                   </div>
                   <div>
-                    <p className="font-bold text-white text-sm tracking-tight">Rahul Verma</p>
-                    <p className="text-[10px] text-neutral-500 uppercase tracking-[0.2em] mt-1">IIT-D President</p>
+                    <p className="font-bold text-white text-sm tracking-tight">Coordinator</p>
+                    <p className="text-[10px] text-neutral-500 uppercase tracking-[0.2em] mt-1">Takshashila World School</p>
                   </div>
                 </div>
               </div>
