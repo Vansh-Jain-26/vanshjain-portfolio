@@ -201,28 +201,83 @@ const AboutPage = () => {
                 </h3>
               </div>
               <p className="text-neutral-500 text-[10px] uppercase tracking-widest max-w-37.5 text-right leading-relaxed hidden md:block">
-                Across India's Elite campuses.
+                Empowering 2,000+ minds across North India.
               </p>
             </div>
 
             {/* Responsive Horizontal Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {institutions.map((item, index) => (
+              {[
+                {
+                  id: "01",
+                  name: "KIET Group of Institutions",
+                  city: "Ghaziabad",
+                  topic: "AI Bootcamp: Vertex AI & Google Agent Kit",
+                  year: "SEPT 2025",
+                  image: "./src/assets/events/Event15.jpg",
+                  aspect: "aspect-video"
+                },
+                {
+                  id: "02",
+                  name: "Doon School",
+                  city: "Baghpat",
+                  topic: "Unlocking Human OS: Habits to Higher Self",
+                  year: "AUG 2025",
+                  image: "./src/assets/events/Event4.jpg",
+                  aspect: "aspect-video"
+                },
+                {
+                  id: "03",
+                  name: "PM Shri Kendriya Vidyalaya",
+                  city: "Baoli",
+                  topic: "Cyber Shield: Scams & Live Hacking Demos",
+                  year: "SEPT 2025",
+                  image: "./src/assets/events/Event12.jpg",
+                  aspect: "aspect-video"
+                },
+                {
+                  id: "04",
+                  name: "Maharaja Agrasen Public School",
+                  city: "Noida",
+                  topic: "Dream Direction Drive: Future Job Trends",
+                  year: "DEC 2025",
+                  image: "./src/assets/events/Event17.jpg",
+                  aspect: "aspect-video"
+                },
+                {
+                  id: "05",
+                  name: "Growell Girls School",
+                  city: "Baraut",
+                  topic: "The DeCode: Cyber Awareness & Ethics",
+                  year: "AUG 2025",
+                  image: "./src/assets/events/Event5.jpg",
+                  aspect: "aspect-video"
+                },
+                {
+                  id: "06",
+                  name: "Lakshya Public School",
+                  city: "Baghpat",
+                  topic: "Founder Fiesta: Startup Fundamentals",
+                  year: "NOV 2025",
+                  image: "./src/assets/events/Event16.jpg",
+                  aspect: "aspect-video"
+                }
+              ].map((item, index) => (
                 <div
                   key={item.id}
-                  // Scroll Reveal Animation (Opacity + Slide Up)
                   className="opacity-0 translate-y-8 animate-[fade-in-up_0.8s_ease-out_forwards]"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <div className="group relative flex flex-col overflow-hidden rounded-3xl bg-neutral-900/40 border border-white/5 transition-all duration-500 hover:bg-neutral-900 hover:border-red-500/20">
 
-                    {/* Short Height Image (aspect-video) */}
+                    {/* Image Layer */}
                     <div className={`relative w-full ${item.aspect} overflow-hidden`}>
                       <img
                         src={item.image}
                         className="w-full h-full object-cover grayscale brightness-50 transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110 group-hover:brightness-100"
+                        alt={item.name}
                       />
-                      <div className="absolute inset-0 bg-linear-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent opacity-60" />
 
                       {/* Year Badge */}
                       <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md border border-white/10 px-2 py-1 rounded-lg">
@@ -230,7 +285,7 @@ const AboutPage = () => {
                       </div>
                     </div>
 
-                    {/* Compact Content Area */}
+                    {/* Content Area */}
                     <div className="p-6 relative">
                       <div className="flex justify-between items-center mb-3">
                         <span className="text-[8px] text-red-500 font-bold uppercase tracking-widest">{item.city}</span>
@@ -259,7 +314,6 @@ const AboutPage = () => {
             </div>
           </div>
 
-          {/* CSS Keyframes for the Slide Animation */}
           <style jsx>{`
     @keyframes fade-in-up {
       to {
