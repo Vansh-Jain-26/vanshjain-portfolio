@@ -13,7 +13,8 @@ import {
 } from 'lucide-react';
 import CountUp from 'react-countup';
 import Events from '../ui/section/Events';
-
+import LiveArchive from './LiveArchive';
+import { Link } from 'react-router-dom';
 
 const SessionsPage = () => {
   const [schoolFilter, setSchoolFilter] = useState('');
@@ -205,67 +206,7 @@ const SessionsPage = () => {
         </div>
       </section>
 
-      {/* SECTION 5: LIVE SESSIONS */}
-      <section className="p-6 md:p-12 lg:p-20 bg-[#FBFBFB]">
-        <div className="mb-16 text-center">
-          <h2
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
-            className="text-4xl md:text-5xl lg:text-6xl font-light text-neutral-900 tracking-tight"
-          >
-            Digital Archive
-          </h2>
-          <p className="text-neutral-500 mt-4 text-sm uppercase tracking-widest">
-            Curated Sessions & Live Recordings
-          </p>
-        </div>
-
-        {/* Pinterest-style Masonry/Columns */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
-          {liveSessions.map((live, i) => (
-            <div
-              key={i}
-              className="break-inside-avoid group cursor-pointer bg-white p-4 rounded-3xl border border-neutral-100/50 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-in-out"
-            >
-              {/* Modern Image Container with soft corners */}
-              <div className="relative aspect-5/5 overflow-hidden rounded-2xl mb-5">
-                {/* Subtle Image Reveal (Starts soft focus) */}
-                <img
-                  src={live.thumbnail}
-                  className="w-full h-full object-cover    transition-all duration-700 ease-in-out"
-                />
-
-                {/* Modern Play Button: Integrated, not a heavy overlay */}
-                <div className="absolute bottom-4 right-4 bg-white/60 backdrop-blur-sm p-3 rounded-full shadow-inner opacity-80 group-hover:opacity-100 transition-opacity">
-                  <PlayCircle
-                    size={24}
-                    className="text-neutral-900"
-                    strokeWidth={1.5}
-                  />
-                </div>
-
-                {/* Platform Tag: Minimalist and positioned bottom-left */}
-                <div className="absolute bottom-4 left-4 bg-black/80 text-white text-[9px] px-3 py-1.5 rounded-full font-medium uppercase tracking-widest scale-90 group-hover:scale-100 transition-transform duration-300">
-                  {live.platform}
-                </div>
-              </div>
-
-              {/* Text Details: Focused on typography */}
-              <div className="px-1 pb-2">
-                <h4 className="text-lg font-medium text-neutral-900 leading-snug mb-1 group-hover:text-red-700 transition-colors">
-                  {live.title}
-                </h4>
-                <div className="flex items-center justify-between mt-3 text-xs text-neutral-500 uppercase tracking-widest">
-                  <p>{live.date}</p>
-                  {/* Minimalist interactive hint */}
-                  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-red-600 font-bold">
-                    View →
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+<LiveArchive/>
 
       {/* SECTION 6: EVENT PORTFOLIO */}
       <section className="py-24 bg-white overflow-hidden">
@@ -455,7 +396,7 @@ const SessionsPage = () => {
           {/* The Main CTA Card */}
           <div className="relative overflow-hidden bg-neutral-900 border border-white/5 rounded-[3rem] p-12 md:p-15 text-center group">
 
-            {/* Animated Background Gradient - Subtle Movement */}
+            {/* Animated Background Gradient */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(185,28,28,0.15),transparent_50%)] group-hover:bg-[radial-gradient(circle_at_50%_120%,rgba(185,28,28,0.25),transparent_50%)] transition-all duration-700"></div>
 
             {/* Content Layer */}
@@ -472,20 +413,28 @@ const SessionsPage = () => {
                 Available for Keynotes • Workshops • Strategy
               </p>
 
-              {/* The "Pinterest Modern" Button */}
+              {/* The "Pinterest Modern" Button Group */}
               <div className="pt-8 flex flex-col md:flex-row items-center justify-center gap-6">
-                <button className="relative group/btn px-8 py-4 bg-white text-black rounded-full font-bold text-sm uppercase tracking-widest overflow-hidden transition-all hover:scale-105 active:scale-95">
-                  <span className="relative z-10">Book a Session</span>
-                  <div className="absolute inset-0 bg-red-600 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
-                </button>
 
+                {/* LINKED CONTACT BUTTON */}
+                <Link
+                  to="/contact"
+                  className="relative group/btn px-8 py-4 bg-white text-black rounded-full font-bold text-sm uppercase tracking-widest overflow-hidden transition-all hover:scale-105 active:scale-95 inline-block"
+                >
+                  <span className="relative z-10 group-hover/btn:text-white transition-colors duration-300">
+                    Book a Session
+                  </span>
+                  <div className="absolute inset-0 bg-red-600 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
+                </Link>
+
+                {/* MEDIA KIT BUTTON */}
                 <button className="px-8 py-4 border border-white/10 text-white rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white/5 transition-all">
                   Get the Media Kit
                 </button>
               </div>
             </div>
 
-            {/* Decorative Floating Elements (Pinterest aesthetic) */}
+            {/* Decorative Floating Elements */}
             <div className="absolute top-10 left-10 text-white/5 font-serif italic text-8xl select-none group-hover:-translate-y-2 transition-transform duration-1000">
               “
             </div>
@@ -493,8 +442,6 @@ const SessionsPage = () => {
               ”
             </div>
           </div>
-
-
         </div>
       </section>
     </div>
