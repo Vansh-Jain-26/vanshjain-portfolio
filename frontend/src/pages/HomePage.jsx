@@ -151,6 +151,8 @@ const HomePage = ({ setPage }) => {
           <div className="flex animate-marquee whitespace-nowrap items-center gap-24 px-12 hover:[animation-play-state:paused] cursor-default">
             {[1, 2].map((_, idx) => (
               <div key={idx} className="flex items-center gap-24">
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-white transition-all duration-500">DELHI UNIVERSITY</span>
+
                 <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-white transition-all duration-500">KIET GHAZIABAD</span>
                 <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-white transition-all duration-500">DOON SCHOOL</span>
                 <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-white transition-all duration-500">KV BAOLI</span>
