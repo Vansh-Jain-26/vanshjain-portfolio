@@ -110,7 +110,7 @@ export default function Events() {
                   src={selectedEvent.imgUrl}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-90" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#050505] via-transparent to-transparent opacity-90" />
                 <div className="absolute bottom-8 left-8 md:bottom-12 md:left-24">
                   <h1 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-8xl italic tracking-tighter leading-none">
                     {selectedEvent.title}
