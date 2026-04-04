@@ -12,7 +12,8 @@ import TestimonialStack from '../ui/section/TestimonialStack';
 import AboutSection from '../ui/section/AboutSection';
 import HeroSection from '../ui/section/HeroSection';
 import Gallery from '../ui/section/Gallery';
-
+import Event1 from '../assets/events/Event1.webp';
+import Event2 from '../assets/events/Event2.webp';
 const HomePage = ({ setPage }) => {
   // Mock Data for Teasers
   const stats = [
@@ -204,7 +205,7 @@ const HomePage = ({ setPage }) => {
             <div className="w-full md:w-1/2 relative group cursor-pointer">
               <div className="overflow-hidden rounded-2xl border border-black/5 shadow-2xl">
                 <img
-                  src="./src/assets/events/Event2.webp"
+                  src={Event2}
                   className="w-full aspect-video object-cover  transition-all duration-700 scale-105 group-hover:scale-100"
                   alt="Session"
                 />
