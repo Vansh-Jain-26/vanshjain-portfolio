@@ -1,4 +1,17 @@
 import React, { useState } from 'react';
+import Event1 from '../assets/events/Event1.webp';
+import Event2 from '../assets/events/Event2.webp';
+import Event3 from '../assets/events/Event3.webp';
+import Event4 from '../assets/events/Event4.webp';
+import Event5 from '../assets/events/Event5.webp';
+import Event6 from '../assets/events/Event6.webp';
+import Event7 from '../assets/events/Event7.webp';
+import Event8 from '../assets/events/Event8.webp';
+import Event10 from '../assets/events/Event10.webp';
+import Event11 from '../assets/events/Event11.webp';
+import Event12 from '../assets/events/Event12.webp';
+import Event15 from '../assets/events/Event15.webp';
+import Event16 from '../assets/events/Event16.webp';
 import {
   Search,
   MapPin,
@@ -235,15 +248,15 @@ const SessionsPage = () => {
         <div className="relative flex">
           <div className="flex animate-infinite-scroll hover:[animation-play-state:paused] cursor-pointer">
             {[
-              { id: 1, title: "AI & LinkedIn Masterclass", context: "July 2025 • Growell Girls", img: "Event1.webp" },
-              { id: 4, title: "Unlocking Human OS", context: "Aug 2025 • Doon School", img: "Event4.webp" },
-              { id: 12, title: "Cyber Shield Masterclass", context: "Sept 2025 • KV Baoli", img: "Event12.jpg" },
-              { id: 15, title: "Vertex AI Bootcamp", context: "Sept 2025 • KIET Group", img: "Event15.webp" },
+              { id: 1, title: "AI & LinkedIn Masterclass", context: "July 2025 • Growell Girls", img: Event1 },
+              { id: 4, title: "Unlocking Human OS", context: "Aug 2025 • Doon School", img: Event4 },
+              { id: 12, title: "Cyber Shield Masterclass", context: "Sept 2025 • KV Baoli", img: Event12 },
+              { id: 15, title: "Vertex AI Bootcamp", context: "Sept 2025 • KIET Group", img: Event15 },
               // Duplicating for seamless loop
-              { id: 1, title: "AI & LinkedIn Masterclass", context: "July 2025 • Growell Girls", img: "Event1.webp" },
-              { id: 4, title: "Unlocking Human OS", context: "Aug 2025 • Doon School", img: "Event4.webp" },
-              { id: 12, title: "Cyber Shield Masterclass", context: "Sept 2025 • KV Baoli", img: "Event12.jpg" },
-              { id: 15, title: "Vertex AI Bootcamp", context: "Sept 2025 • KIET Group", img: "Event15.webp" },
+              { id: 1, title: "AI & LinkedIn Masterclass", context: "July 2025 • Growell Girls", img: Event1 },
+              { id: 4, title: "Unlocking Human OS", context: "Aug 2025 • Doon School", img: Event4 },
+              { id: 12, title: "Cyber Shield Masterclass", context: "Sept 2025 • KV Baoli", img: Event12 },
+              { id: 15, title: "Vertex AI Bootcamp", context: "Sept 2025 • KIET Group", img: Event15 },
             ].map((item, i) => (
               <div
                 key={i}
