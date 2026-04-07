@@ -809,7 +809,7 @@ const HomePage = ({ setPage }) => {
                       <span className="text-red-500/60 font-bold italic">Currently Dormant</span>
                     </div>
                     <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl italic text-neutral-500 group-hover:text-white transition-colors duration-700">
-                      Aahaar Nirvana <span className="text-xs not-italic font-sans opacity-20 ml-2 italic">Food-Tech</span>
+                      Aahaar Nirvana <span className="text-xs not-italic font-sans opacity-20 ml-2">Food-Tech</span>
                     </h3>
                     <p className="text-neutral-600 text-sm font-medium uppercase tracking-tighter">Founder</p>
                   </div>
