@@ -351,8 +351,8 @@ const AboutPage = () => {
           <div className="relative flex flex-col gap-6">
 
             {/* Masking Gradients for a 'Smooth' Fade on edges */}
-            <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div>
+            {/* <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div> */}
 
             {/* Row 1: Sliding Left */}
             <div className="flex animate-marquee-slow whitespace-nowrap items-center gap-6 group cursor-default">
