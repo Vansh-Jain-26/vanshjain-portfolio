@@ -844,7 +844,7 @@ const HomePage = ({ setPage }) => {
                           While the MVP proved the unit economics, operations were paused to apply these marketplace learnings to the education sector with Kattalyx Labs.
                         </p>
                       </div>
-                      <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5">
+                      <div className="p-5 rounded-2xl bg-white/2 border border-white/5">
                         <p className="text-white/30 text-[8px] uppercase tracking-tighter mb-2 font-bold italic">Learning Gained</p>
                         <ul className="text-[10px] text-neutral-600 space-y-1 font-mono uppercase tracking-tight">
                           <li>• Trust-Based Vendor Onboarding</li>
