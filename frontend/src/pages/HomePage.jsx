@@ -135,66 +135,7 @@ const HomePage = ({ setPage }) => {
         </div>
       </section>
 
-      {/* --- SECTION 2: THE LOGO WALL (Authority) --- */}
-      <section className="py-20 border-y border-white/5 bg-white overflow-hidden relative group">
-        {/* Modern Label */}
-        <div className="flex flex-col items-center mb-12">
-          <p className="text-[10px] uppercase tracking-[0.6em] text-neutral-600 font-bold">
-            Trusted by Leading Institutions
-          </p>
-          <div className="h-8 w-px bg-linear-to-b from-transparent via-red-900/50 to-transparent mt-4"></div>
-        </div>
 
-        {/* The Infinite Slider Container */}
-        <div className="relative flex  flex-col overflow-hidden">
-          {/* Gradient Fades for Depth */}
-          {/* <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div> */}
-
-          {/* The Sliding Track */}
-          <div className="flex animate-marquee whitespace-nowrap items-center gap-24 px-12 hover:[animation-play-state:paused] cursor-default">
-            {[1, 2].map((_, idx) => (
-              <div key={idx} className="flex items-center gap-24">
-
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KIET GHAZIABAD</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">DOON SCHOOL</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KV BAOLI</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">GROWELL SCHOOLS</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">TAKSHASHILA WORLD</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">CAMBRIDGE PUBLIC</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">MAHARAJA AGRASEN</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">LAKSHYA PUBLIC</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">SAIFIA INSTITUTE</span>
-              </div>
-            ))}
-          </div>
-
-
-          {/* The Sliding Track */}
-          <div className="flex animate-marquee whitespace-nowrap items-center gap-24 px-12 hover:[animation-play-state:paused] cursor-default pt-10">
-            {[1, 2].map((_, idx) => (
-              <div key={idx} className="flex items-center gap-24">
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">DELHI UNIVERSITY</span>
-                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KITE Institution</span>
-
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Custom CSS for Animation */}
-        <style jsx>{`
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .animate-marquee {
-      animation: marquee 40s linear infinite;
-      display: flex;
-      width: max-content;
-    }
-  `}</style>
-      </section>
 
 
 
@@ -334,6 +275,69 @@ const HomePage = ({ setPage }) => {
           </div>
         </div>
       </section>
+
+
+      {/* --- SECTION 2: THE LOGO WALL (Authority) --- */}
+      <section className="py-20 border-y border-white/5 bg-white overflow-hidden relative group">
+        {/* Modern Label */}
+        <div className="flex flex-col items-center mb-12">
+          <p className="text-[10px] uppercase tracking-[0.6em] text-neutral-600 font-bold">
+            Trusted by Leading Institutions
+          </p>
+          <div className="h-8 w-px bg-linear-to-b from-transparent via-red-900/50 to-transparent mt-4"></div>
+        </div>
+
+        {/* The Infinite Slider Container */}
+        <div className="relative flex  flex-col overflow-hidden">
+          {/* Gradient Fades for Depth */}
+          {/* <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-[#050505] to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-[#050505] to-transparent z-10 pointer-events-none"></div> */}
+
+          {/* The Sliding Track */}
+          <div className="flex animate-marquee whitespace-nowrap items-center gap-24 px-12 hover:[animation-play-state:paused] cursor-default">
+            {[1, 2].map((_, idx) => (
+              <div key={idx} className="flex items-center gap-24">
+
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KIET GHAZIABAD</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">DOON SCHOOL</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KV BAOLI</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">GROWELL SCHOOLS</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">TAKSHASHILA WORLD</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">CAMBRIDGE PUBLIC</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">MAHARAJA AGRASEN</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">LAKSHYA PUBLIC</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">SAIFIA INSTITUTE</span>
+              </div>
+            ))}
+          </div>
+
+
+          {/* The Sliding Track */}
+          <div className="flex animate-marquee whitespace-nowrap items-center gap-24 px-12 hover:[animation-play-state:paused] cursor-default pt-10">
+            {[1, 2].map((_, idx) => (
+              <div key={idx} className="flex items-center gap-24">
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">DELHI UNIVERSITY</span>
+                <span className="text-3xl md:text-4xl font-serif italic text-neutral-800 hover:text-black transition-all duration-500">KITE Institution</span>
+
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Custom CSS for Animation */}
+        <style jsx>{`
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      animation: marquee 40s linear infinite;
+      display: flex;
+      width: max-content;
+    }
+  `}</style>
+      </section>
+      
       {/* --- SECTION 5: LATEST Blog (Teaser) --- */}
       <section className="py-20 px-8 md:px-20 bg-[#0a0a0a]">
         {/* Header: Compact Editorial Style */}
