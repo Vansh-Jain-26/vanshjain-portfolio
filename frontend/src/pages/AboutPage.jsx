@@ -506,6 +506,7 @@ const AboutPage = () => {
 
           </div>
         </section>
+       
         {/* SECTION 6: STARTUP JOURNEY */}
         <div className="mb-40 px-6 md:px-20 pt-20">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
@@ -521,7 +522,7 @@ const AboutPage = () => {
                   The Startup <br /> Journey
                 </h3>
                 <p className="text-neutral-500 text-sm font-light leading-relaxed max-w-70">
-                  From a raw idea in a dorm room to a scaled venture. A timeline of failures, pivots, and growth.
+                  From identifying a gap in the educational ecosystem to impacting thousands of students. A timeline of execution and scale.
                 </p>
               </div>
             </div>
@@ -533,9 +534,27 @@ const AboutPage = () => {
               <div className="absolute left-0 top-0 bottom-0 w-px bg-linear-to-b from-red-600/50 via-white/5 to-transparent"></div>
 
               {[
-                { year: "2021", title: "Founded [Startup Name]", desc: "Started the journey by solving X problem with a team of two.", tags: ["Ideation", "Seed"] },
-                { year: "2022", title: "Scaling Product", desc: "Reached first 1000 users and secured seed funding to expand tech.", tags: ["Growth", "Scale"] },
-                { year: "2024", title: "Global Expansion", desc: "Currently building the future of Y industry across 3 continents.", tags: ["Current", "Impact"] }
+                {
+                  date: "Dec 2024",
+                  title: "Kattalyx Labs Foundation",
+                  desc: "Identified the critical gap in integrated school ecosystems. Assembled a founding team of two to architect a new way for students to engage with technology and innovation.",
+                  tags: ["Ideation", "Founding"],
+                  phase: "Phase 01"
+                },
+                {
+                  date: "July 2025",
+                  title: "Execution & First Traction",
+                  desc: "Shifted from theory to reality with our first major event. Delivered our inaugural workshop, reaching 1,000 users and establishing the blueprint for high-impact educational delivery.",
+                  tags: ["Execution", "1K Users"],
+                  phase: "Phase 02"
+                },
+                {
+                  date: "Present",
+                  title: "Scaling & Regional Impact",
+                  desc: "Successfully scaled to 20+ institutions across 10+ cities. With 25+ events delivered, we've impacted over 10,000 students and continue to build the future of student ecosystems.",
+                  tags: ["Scale", "10K+ Students"],
+                  phase: "Phase 03"
+                }
               ].map((milestone, idx) => (
                 <div key={idx} className="relative pl-12 group">
 
@@ -550,10 +569,10 @@ const AboutPage = () => {
                     <div className="flex-1 space-y-4">
                       <div className="flex items-center gap-4">
                         <span className="text-[11px] font-mono text-neutral-600 bg-white/5 px-2 py-0.5 rounded uppercase tracking-tighter">
-                          Phase 0{idx + 1}
+                          {milestone.phase}
                         </span>
                         <span className="h-px w-4 bg-white/10"></span>
-                        <span className="text-[11px] font-mono text-red-500 uppercase tracking-widest">{milestone.year}</span>
+                        <span className="text-[11px] font-mono text-red-500 uppercase tracking-widest">{milestone.date}</span>
                       </div>
 
                       <h4
@@ -567,7 +586,7 @@ const AboutPage = () => {
                         {milestone.desc}
                       </p>
 
-                      {/* Skill/Tag Pills inside Timeline */}
+                      {/* Skill/Tag Pills */}
                       <div className="flex gap-2 pt-2">
                         {milestone.tags.map(tag => (
                           <span key={tag} className="text-[8px] uppercase tracking-[0.2em] px-3 py-1 border border-white/5 text-neutral-600 rounded-full group-hover:border-red-500/20 group-hover:text-neutral-400 transition-all">
@@ -577,10 +596,10 @@ const AboutPage = () => {
                       </div>
                     </div>
 
-                    {/* Aesthetic Visual Side-Detail (Pinterest Feel) */}
+                    {/* Aesthetic Visual Side-Detail */}
                     <div className="hidden md:block w-32 h-32 rounded-2xl overflow-hidden grayscale opacity-20 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 bg-neutral-900 border border-white/5 rotate-3 group-hover:rotate-0">
                       <img
-                        src={`https://images.unsplash.com/photo-${1500000000000 + idx}?q=80&w=200`}
+                        src={`https://images.unsplash.com/photo-${1550000000000 + (idx * 1000)}?q=80&w=200`}
                         className="w-full h-full object-cover"
                         alt="Milestone"
                       />
