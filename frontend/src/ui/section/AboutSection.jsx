@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Eye, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
+
 const AboutSection = () => {
   return (
     <section className="relative bg-[#0a0a0a] min-h-screen py-24 px-6 flex flex-col items-center overflow-hidden font-sans text-white">
