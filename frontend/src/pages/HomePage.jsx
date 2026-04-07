@@ -13,6 +13,7 @@ import AboutSection from '../ui/section/AboutSection';
 import HeroSection from '../ui/section/HeroSection';
 import Gallery from '../ui/section/Gallery';
 import Event1 from '../assets/events/Event1.webp';
+import DU1 from '../assets/events/DU1.webp';
 import Event2 from '../assets/events/Event2.webp';
 import { FiArrowUpRight, FiInstagram, FiLinkedin, FiFacebook, FiMail, FiPhone, FiExternalLink } from 'react-icons/fi';
 import { SiReactos } from 'react-icons/si';
@@ -242,7 +243,7 @@ const HomePage = ({ setPage }) => {
               <div className="relative aspect-4/5 md:aspect-7/5 overflow-hidden rounded-[3rem] border border-white/10 bg-neutral-900 shadow-2xl">
                 {/* Main Image - Yahan aap Event1 ya DU ki photo laga sakte hain */}
                 <img
-                  src={Event1}
+                  src={DU1}
                   alt="Delhi University Seminar"
                   className="w-full h-full object-cover  transition-all duration-700 group-hover:scale-105"
                 />
@@ -254,9 +255,9 @@ const HomePage = ({ setPage }) => {
                       <p className="text-[10px] font-mono text-red-500 uppercase tracking-widest font-bold">Venue</p>
                       <p className="text-xl font-serif italic text-white">Conference Centre, North Campus</p>
                     </div>
-                    <div className="h-10 w-10 rounded-full border border-white/20 flex items-center justify-center">
+                    {/* <div className="h-10 w-10 rounded-full border border-white/20 flex items-center justify-center">
                       <ArrowUpRight className="w-4 h-4 text-white" />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
