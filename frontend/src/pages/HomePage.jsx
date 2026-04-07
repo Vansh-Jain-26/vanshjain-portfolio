@@ -14,6 +14,9 @@ import HeroSection from '../ui/section/HeroSection';
 import Gallery from '../ui/section/Gallery';
 import Event1 from '../assets/events/Event1.webp';
 import Event2 from '../assets/events/Event2.webp';
+import { FiArrowUpRight, FiInstagram, FiLinkedin, FiFacebook, FiMail, FiPhone, FiExternalLink } from 'react-icons/fi';
+import { SiReactos } from 'react-icons/si';
+
 const HomePage = ({ setPage }) => {
   // Mock Data for Teasers
   const stats = [
@@ -206,7 +209,7 @@ const HomePage = ({ setPage }) => {
                   Featured Engagement
                 </span>
                 <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-6xl md:text-7xl italic leading-none tracking-tighter text-white">
-                  The North Campus <br />
+                  Delhi University<br />
                   <span className="text-neutral-800 not-italic">Seminar</span>
                 </h2>
               </div>
@@ -259,10 +262,10 @@ const HomePage = ({ setPage }) => {
               </div>
 
               {/* Decorative Badge */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-red-600 rounded-full flex items-center justify-center rotate-12 shadow-2xl border-4 border-[#050505] z-20">
+              <div className="absolute -top-6 -right-6 w-28 h-28 bg-red-600 rounded-full flex items-center justify-center rotate-12 shadow-2xl border-4 border-[#050505] z-20">
                 <div className="text-center">
-                  <p className="text-[8px] font-bold uppercase tracking-tighter text-white">DU</p>
-                  <p className="text-xl font-serif italic text-white">Impact</p>
+                  <p className="text-[25px] font-bold uppercase tracking-tighter text-white">DU</p>
+                  {/* <p className="text-xl font-serif italic text-white">Impact</p> */}
                 </div>
               </div>
 
@@ -337,7 +340,7 @@ const HomePage = ({ setPage }) => {
     }
   `}</style>
       </section>
-      
+
       {/* --- SECTION 5: LATEST Blog (Teaser) --- */}
       <section className="py-20 px-8 md:px-20 bg-[#0a0a0a]">
         {/* Header: Compact Editorial Style */}
@@ -599,42 +602,75 @@ const HomePage = ({ setPage }) => {
             {/* VENTURE 1: KATTALYX LABS */}
             <div className="relative group">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                {/* Left Branding & CTA */}
                 <div className="lg:col-span-5 space-y-8">
                   <div className="space-y-2">
                     <div className="flex items-center gap-3 text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
                       <span>Founded Dec 2024</span>
                       <span className="w-1 h-1 bg-red-600 rounded-full"></span>
-                      <span>Agra, UP</span>
+                      <span>Ghaziabad, Uttar Pradesh</span>
                     </div>
                     <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl italic text-white group-hover:text-red-500 transition-colors duration-500">
-                      Kattalyx Labs <span className="text-xs not-italic font-sans opacity-40 ml-2">Pvt. Ltd.</span>
+                      Kattalyx Labs <span className="text-xs not-italic font-sans opacity-40 ml-2">Pvt Ltd</span>
                     </h3>
                     <p className="text-red-500 text-sm font-medium uppercase tracking-tighter">Founder & CEO</p>
                   </div>
 
                   <p className="text-neutral-400 font-light leading-relaxed italic text-lg border-l border-white/10 pl-6">
-                    "Reimagining School Education for Real-World Readiness. We're building future-ready learners, not exam-ready students."
+                    "Building an integrated ecosystem that bridges the gap between traditional schooling and real-world success. We don't just teach; we transform the educational journey."
                   </p>
 
-                  <div className="flex flex-col gap-4">
-                    <a href="https://www.kattalyxlabs.com" target="_blank" className="w-fit px-8 py-4 bg-white text-black rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-red-600 hover:text-white transition-all">
-                      Explore Kattalyx Labs →
-                    </a>
-                    <span className="text-[9px] text-neutral-600 font-mono uppercase pl-4 tracking-widest italic">official@kattalyxlab.com</span>
+                  <div className="space-y-6">
+                    <div className="flex flex-col gap-5">
+                      <a
+                        href="https://www.kattalyxlabs.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 w-fit px-8 py-4 bg-white text-black rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-red-600 hover:text-white transition-all duration-300"
+                      >
+                        Explore Kattalyx Labs <FiExternalLink size={14} />
+                      </a>
+
+                      {/* Social Media Row */}
+                      <div className="flex gap-6 pl-4 text-neutral-500">
+                        <a href="https://www.instagram.com/kattalyx.labs/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                          <FiInstagram size={20} />
+                        </a>
+                        <a href="https://www.linkedin.com/company/kattalyx-labs/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                          <FiLinkedin size={20} />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2 pl-4">
+                      <div className="flex items-center gap-2 text-[9px] text-neutral-600 font-mono uppercase tracking-widest italic">
+                        <FiMail className="text-red-500/50" /> official@kattalyxlab.com
+                      </div>
+                      <div className="flex items-center gap-2 text-[9px] text-neutral-600 font-mono uppercase tracking-widest italic">
+                        <FiPhone className="text-red-500/50" /> +91 9105300307
+                      </div>
+                    </div>
                   </div>
                 </div>
 
+                {/* Right Content & Metrics */}
                 <div className="lg:col-span-7 bg-neutral-900/20 border border-white/5 rounded-[3rem] p-8 md:p-12 backdrop-blur-sm">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+                    {/* Deliverables List */}
                     <div>
                       <h4 className="text-red-500 text-[10px] uppercase tracking-widest font-bold mb-4">What We Deliver</h4>
                       <ul className="text-xs space-y-3 text-neutral-300 font-light">
-                        <li>• 50+ Modular Curriculum (AI, Finance, Mental Health)</li>
+                        <li>• 50+ Modular Curriculum (AI, Finance, Product)</li>
                         <li>• EliteVerse ERP Transformation Product</li>
-                        <li>• Live Workshops & Industry Speaker Networks</li>
-                        <li>• Real-world Mentorship Programs</li>
+                        <li>• Industry Speaker Networks & Live Workshops</li>
+                        <li>• Real-world Mentorship & Career Pathways</li>
+                        <li>• Portfolio Building for 10th-12th Graders</li>
                       </ul>
                     </div>
+
+                    {/* Dynamic Impact Metrics */}
                     <div className="bg-white/5 p-6 rounded-3xl border border-white/5">
                       <h4 className="text-white text-[10px] uppercase tracking-widest font-bold mb-4">The Impact</h4>
                       <div className="space-y-4">
@@ -643,82 +679,138 @@ const HomePage = ({ setPage }) => {
                           <span className="text-[8px] text-neutral-500 uppercase tracking-tighter">Students Reached</span>
                         </div>
                         <div className="flex justify-between items-end border-b border-white/5 pb-2">
-                          <span className="text-2xl font-serif italic text-white">12+</span>
+                          <span className="text-2xl font-serif italic text-white">20+</span>
                           <span className="text-[8px] text-neutral-500 uppercase tracking-tighter">Institutions</span>
+                        </div>
+                        <div className="flex justify-between items-end border-b border-white/5 pb-2">
+                          <span className="text-2xl font-serif italic text-white">25+</span>
+                          <span className="text-[8px] text-neutral-500 uppercase tracking-tighter">Events Delivered</span>
+                        </div>
+                        <div className="flex justify-between items-end border-b border-white/5 pb-2">
+                          <span className="text-2xl font-serif italic text-white">10+</span>
+                          <span className="text-[8px] text-neutral-500 uppercase tracking-tighter">Cities Covered</span>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <p className="text-[10px] text-neutral-500 leading-relaxed italic uppercase tracking-wider text-center">
-                    Indian schools teach exams, not life. We fix this by bringing real learning into classrooms.
-                  </p>
+
+                  {/* Venture Thesis */}
+                  <div className="pt-8 border-t border-white/5">
+                    <p className="text-[10px] text-neutral-500 leading-relaxed italic uppercase tracking-wider text-center max-w-md mx-auto">
+                      Indian schools teach exams, not life. Kattalyx Labs fixes this by bringing real learning into classrooms through a unified ecosystem.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* VENTURE 2: ELITE VERSE SOLUTIONS */}
-            <div className="relative group">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:flex-row-reverse">
-                <div className="lg:col-span-7 order-2 lg:order-1 bg-neutral-900/20 border border-white/5 rounded-[3rem] p-8 md:p-12 backdrop-blur-sm">
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8 text-center">
-                    {['Web & App', 'Branding', 'Strategy', 'Consultancy', 'ERP Systems', 'Ready-to-Fund'].map((item) => (
-                      <div key={item} className="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center text-[9px] uppercase font-bold tracking-widest text-neutral-400 hover:text-white transition-colors">
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-                  <div className="border-t border-white/5 pt-8">
-                    <h4 className="text-red-500 text-[10px] uppercase tracking-widest font-bold mb-4">Why Us?</h4>
-                    <p className="text-xs text-neutral-300 font-light leading-loose">
-                      We're founders too. We ship fast. We don't over-design. We focus on what matters—metrics and growth. We build systems that convert idea to impact.
-                    </p>
-                  </div>
-                </div>
+<div className="relative group">
+  <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
-                <div className="lg:col-span-5 order-1 lg:order-2 space-y-8">
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-3 text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
-                      <span>Founded April 2025</span>
-                      <span className="w-1 h-1 bg-red-600 rounded-full"></span>
-                      <span>Noida, UP</span>
-                    </div>
-                    <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl italic text-white group-hover:text-red-500 transition-colors duration-500">
-                      Elite Verse <span className="text-xs not-italic font-sans opacity-40 ml-2">Solutions</span>
-                    </h3>
-                    <p className="text-red-500 text-sm font-medium uppercase tracking-tighter">Founder & Managing Director</p>
-                  </div>
+    {/* Left Section: Service Grid & Why Us */}
+    <div className="lg:col-span-7 order-2 lg:order-1 bg-neutral-900/20 border border-white/5 rounded-[3rem] p-8 md:p-12 backdrop-blur-sm">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8 text-center">
+        {[
+          'Web & App Dev',
+          'UI/UX & Brand Identity',
+          'Digital Marketing',
+          'Business Consultancy',
+          'ERP/CRM Systems',
+          'Startup Readiness'
+        ].map((item) => (
+          <div key={item} className="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center text-[8px] md:text-[9px] uppercase font-bold tracking-widest text-neutral-400 hover:text-red-400 hover:border-red-500/20 transition-all duration-300">
+            {item}
+          </div>
+        ))}
+      </div>
 
-                  <p className="text-neutral-400 font-light leading-relaxed italic text-lg border-l border-white/10 pl-6">
-                    "Execution Agency for Founders Who Want to Scale. We don't design for show—we build systems that convert."
-                  </p>
+      <div className="border-t border-white/5 pt-8">
+        <h4 className="text-red-500 text-[10px] uppercase tracking-widest font-bold mb-4 italic flex items-center gap-2">
+          <SiReactos /> Why Us?
+        </h4>
+        <p className="text-xs text-neutral-300 font-light leading-loose">
+          Look, we’re founders too. We get the struggle of trying to scale while everything is breaking. We ship fast, we don’t over-design for the sake of aesthetics, and we definitely don’t do fluff. We focus on the only things that actually move the needle: growth, metrics, and clean execution. From pitch decks to full-scale ERPs, we build the systems that turn your "what if" into a scalable reality. No gatekeeping, just pure output.
+        </p>
+      </div>
+    </div>
 
-                  <a href="https://www.eliteversesolutions.com" target="_blank" className="block w-fit px-8 py-4 border border-white/20 text-white rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all">
-                    Work With Us →
-                  </a>
-                </div>
-              </div>
-            </div>
+    {/* Right Section: Branding & Bio */}
+    <div className="lg:col-span-5 order-1 lg:order-2 space-y-8">
+      <div className="space-y-2">
+        <div className="flex items-center gap-3 text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
+          <span>Founded April 2025</span>
+          <span className="w-1 h-1 bg-red-600 rounded-full"></span>
+          <span>Noida, Uttar Pradesh</span>
+        </div>
+        <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl italic text-white group-hover:text-red-500 transition-colors duration-500">
+          Elite Verse <span className="text-xs not-italic font-sans opacity-40 ml-2">Solutions Pvt Ltd</span>
+        </h3>
+        <p className="text-red-500 text-sm font-medium uppercase tracking-tighter">Founder & Managing Director</p>
+      </div>
 
-            {/* --- VENTURE 3: AAHAAR NIRVANA --- */}
+      <p className="text-neutral-400 font-light leading-relaxed italic text-lg border-l border-white/10 pl-6">
+        "The execution partner for founders who are tired of agencies that don’t get it. We build systems that convert ideas into impact."
+      </p>
+
+      <div className="space-y-6">
+        <div className="flex flex-col gap-5">
+          <a
+            href="https://www.eliteversesolutions.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 w-fit px-8 py-4 border border-white/20 text-white rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
+          >
+            Work With Us <FiArrowUpRight size={14} />
+          </a>
+          
+          {/* Social Media Row */}
+          <div className="flex gap-6 pl-4 text-neutral-500">
+            <a href="https://www.instagram.com/eliteverse.solutions/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                <FiInstagram size={20} />
+            </a>
+            <a href="#" className="hover:text-white transition-colors opacity-20 cursor-not-allowed">
+                <FiLinkedin size={20} />
+            </a>
+            <a href="#" className="hover:text-white transition-colors opacity-20 cursor-not-allowed">
+                <FiFacebook size={20} />
+            </a>
+          </div>
+        </div>
+
+        <div className="space-y-2 pl-4">
+          <div className="flex items-center gap-2 text-[9px] text-neutral-600 font-mono uppercase tracking-widest italic">
+            <FiMail className="text-red-500/50" /> official@eliteversesolutions.com
+          </div>
+          <div className="flex items-center gap-2 text-[9px] text-neutral-600 font-mono uppercase tracking-widest italic">
+            <FiPhone className="text-red-500/50" /> +91 9105300307
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+            {/* VENTURE 3: AAHAAR NIRVANA */}
             <div className="relative group">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
-                {/* Left Side: Content */}
+                {/* Left Side: Narrative & Strategy */}
                 <div className="lg:col-span-5 space-y-8">
                   <div className="space-y-2">
                     <div className="flex items-center gap-3 text-[10px] font-mono text-neutral-600 uppercase tracking-[0.4em]">
-                      <span>July 2024</span>
+                      <span>Founded July 2024</span>
                       <span className="w-1 h-1 bg-neutral-800 rounded-full"></span>
-                      <span className="text-red-500 font-bold">Currently Dormant</span>
+                      <span className="text-red-500/60 font-bold italic">Currently Dormant</span>
                     </div>
-                    <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl italic text-neutral-400 group-hover:text-white transition-colors duration-700">
-                      Aahaar Nirvana <span className="text-xs not-italic font-sans opacity-20 ml-2">Food-Tech</span>
+                    <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl italic text-neutral-500 group-hover:text-white transition-colors duration-700">
+                      Aahaar Nirvana <span className="text-xs not-italic font-sans opacity-20 ml-2 italic">Food-Tech</span>
                     </h3>
                     <p className="text-neutral-600 text-sm font-medium uppercase tracking-tighter">Founder</p>
                   </div>
 
                   <p className="text-neutral-500 font-light leading-relaxed italic text-lg border-l border-white/5 pl-6">
-                    "Connecting Home Chefs With People Who Crave Authentic Meals. A community-driven alternative to traditional food delivery."
+                    "Empowering the silent culinary experts of our homes. Aahaar Nirvana proved that the most authentic dining experiences aren't found in restaurants—they're right next door."
                   </p>
 
                   <div className="flex flex-wrap gap-3">
@@ -730,30 +822,37 @@ const HomePage = ({ setPage }) => {
                   </div>
                 </div>
 
-                {/* Right Side: Details Card */}
-                <div className="lg:col-span-7 bg-neutral-900/10 border border-dashed border-white/10 rounded-[3rem] p-8 md:p-12 backdrop-blur-[2px] group-hover:border-white/20 transition-all duration-700">
-                  <div className="space-y-8">
+                {/* Right Side: Problem, Impact, & Growth */}
+                <div className="lg:col-span-7 relative overflow-hidden bg-neutral-900/10 border border-dashed border-white/10 rounded-[3rem] p-8 md:p-12 backdrop-blur-[2px] group-hover:border-white/20 transition-all duration-700">
+                  <div className="space-y-8 relative z-10">
                     <div>
-                      <h4 className="text-white/40 text-[10px] uppercase tracking-widest font-bold mb-6">The Backstory</h4>
+                      <h4 className="text-white/40 text-[10px] uppercase tracking-widest font-bold mb-6 italic">The Problem & Impact</h4>
                       <p className="text-sm text-neutral-500 font-light leading-relaxed italic">
-                        Homemakers wanted to monetize their passion. Customers wanted real home food. We built a dual-sided marketplace and proved the concept through grassroots onboarding across Ghaziabad.
+                        Millions of homemakers possess elite culinary skills but lack the platform to monetize them. We solved this by building a hyper-local, dual-sided marketplace that connected them with urban dwellers craving "Ghar ka Khaana." We successfully validated the demand through grassroots onboarding in Ghaziabad, managing the full stack from tech to logistics.
                       </p>
                     </div>
 
-                    <div className="pt-6 border-t border-white/5 grid grid-cols-2 gap-4">
-                      <div className="p-4 rounded-2xl bg-white/2">
-                        <p className="text-white/30 text-[8px] uppercase tracking-tighter mb-1">Status</p>
-                        <p className="text-xs text-neutral-500 italic">Significant learning gathered. Focus shifted to Kattalyx Labs.</p>
+                    <div className="pt-6 border-t border-white/5 grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5">
+                        <p className="text-white/30 text-[8px] uppercase tracking-tighter mb-2 font-bold italic">The Shift</p>
+                        <p className="text-xs text-neutral-500 italic leading-relaxed">
+                          While the MVP proved the unit economics, operations were paused to apply these marketplace learnings to the education sector with Kattalyx Labs.
+                        </p>
                       </div>
-                      <div className="p-4 rounded-2xl bg-white/2">
-                        <p className="text-white/30 text-[8px] uppercase tracking-tighter mb-1">Impact</p>
-                        <p className="text-xs text-neutral-500 italic">Full business operations from tech to marketing to partnerships.</p>
+                      <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5">
+                        <p className="text-white/30 text-[8px] uppercase tracking-tighter mb-2 font-bold italic">Learning Gained</p>
+                        <ul className="text-[10px] text-neutral-600 space-y-1 font-mono uppercase tracking-tight">
+                          <li>• Trust-Based Vendor Onboarding</li>
+                          <li>• Hyper-Local Delivery Logic</li>
+                          <li>• Community-Led Growth Hacks</li>
+                          <li>• Tech-Ops Synchronization</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
 
-                  {/* Ghost Background Text for Aahaar */}
-                  <div className="absolute -bottom-6 -right-4 text-[10rem] font-serif italic text-white/1 pointer-events-none select-none">
+                  {/* Ghost Background Text */}
+                  <div className="absolute -bottom-8 -right-4 text-[8rem] md:text-[10rem] font-serif italic text-white/[0.02] pointer-events-none select-none">
                     Nirvana
                   </div>
                 </div>
