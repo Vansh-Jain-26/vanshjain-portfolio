@@ -602,7 +602,7 @@ const HomePage = ({ setPage }) => {
             </h2>
           </div>
 
-          <div className="space-y-40">
+          <div className="space-y-40" id="venture">
 
             {/* VENTURE 1: KATTALYX LABS */}
             <div className="relative group">
