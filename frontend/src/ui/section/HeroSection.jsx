@@ -39,7 +39,7 @@ const HeroSection = () => {
 
             {/* Contact Badge (More Compact) */}
             <a
-              href="mailto:connect@vansh.me"
+              href="mailto:connect@vanshjain.in"
               className="absolute -bottom-3 -left-3 bg-[#0a0a0a] border border-white/10 px-3 py-2 rounded-lg z-20 shadow-2xl hover:border-red-500/30 transition-colors group/badge"
             >
               <p className="text-[8px] text-neutral-500 uppercase tracking-widest leading-none">Connect</p>
@@ -71,7 +71,7 @@ const HeroSection = () => {
               Bold Ideas • Scalable Impact
             </p>
             <p className="text-neutral-300 text-sm sm:text-base font-medium mb-3">
-              Founder & CEO at <span className="text-white border-b border-white/10">Kattalyx Labs</span> | <span className="text-white border-b border-white/10">Elite Verse Solutions</span>
+              Founder & CEO at <span className="text-white border-b border-white/10">Kattalyx Labs Pvt Ltd</span> | <span className="text-white border-b border-white/10">Founder & MD Elite Verse Solutions Pvt Ltd</span> | <span className="text-white border-b border-white/10">Content Creator</span> | <span className="text-white border-b border-white/10">Newsletter Authore: 2AM Startup Newsletter</span>
             </p>
             {/* <p className="text-neutral-500 text-xs sm:text-sm leading-relaxed">
               I build systems that solve real problems. Whether reimagining education or helping founders scale, I thrive on execution and creating lasting impact.
@@ -81,10 +81,10 @@ const HeroSection = () => {
           {/* Impact Stats (More minimal) */}
           <div className="flex flex-wrap justify-center lg:justify-start items-center gap-6 sm:gap-8 mb-10 py-4 border-y border-white/5 w-full lg:w-auto">
             {[
-              { label: 'Students', val: '10K+' },
-              { label: 'Institutions', val: '12+' },
-              { label: 'Events', val: '20+' },
-              { label: 'Subscribers', val: '2000+' },
+              { label: 'Students Impacted', val: '10K+' },
+              { label: 'Institutions', val: '20+' },
+              { label: 'Events', val: '25+' },
+              { label: ' Newsletter Subscribers', val: '2000+' },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col">
                 <span className="text-lg sm:text-xl font-bold text-white tracking-tighter">{stat.val}</span>
