@@ -27,7 +27,7 @@ export const posts = [
       Instagram: <a href="https://www.instagram.com/vansh_jain_26/" target="_blank">https://www.instagram.com/vansh_jain_26/</a><br>
       LinkedIn: <a href="https://www.linkedin.com/in/vansh-jain26/" target="_blank">https://www.linkedin.com/in/vansh-jain26/</a></p>
     `,
-    image: "https://images.unsplash.com/photo-1523240715181-2f0f9f22ec8d?q=80&w=1000"
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000"
   },
   {
     id: 2,
