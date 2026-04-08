@@ -55,7 +55,7 @@ const BlogPage = () => {
         {filteredPosts.map((post) => (
           <Link key={post.id} to={`/blog/${post.id}`} className="group cursor-pointer">
             <article>
-              <div className="relative aspect-[4/5] overflow-hidden mb-8 bg-neutral-900">
+              <div className="relative aspect-4/5 overflow-hidden mb-8 bg-neutral-900">
                 <img
                   src={post.image}
                   alt={post.title}
