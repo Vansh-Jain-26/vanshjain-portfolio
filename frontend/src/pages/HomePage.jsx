@@ -14,6 +14,7 @@ import HeroSection from '../ui/section/HeroSection';
 import Gallery from '../ui/section/Gallery';
 import Event1 from '../assets/events/Event1.webp';
 import DU1 from '../assets/events/DU1.webp';
+import DU2 from '../assets/events/DU2.webp';
 import Event2 from '../assets/events/Event2.webp';
 import { FiArrowUpRight, FiInstagram, FiLinkedin, FiFacebook, FiMail, FiPhone, FiExternalLink } from 'react-icons/fi';
 import { SiReactos } from 'react-icons/si';
@@ -207,11 +208,11 @@ const HomePage = ({ setPage }) => {
             <div className="lg:col-span-5 space-y-8 relative z-10">
               <div className="space-y-4">
                 <span className="text-red-500 font-mono text-[10px] uppercase tracking-[0.6em] font-bold block">
-                  Featured Engagement
+                  Academic Chapters
                 </span>
                 <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-6xl md:text-7xl italic leading-none tracking-tighter text-white">
-                  Delhi School of <br />
-                  <span className="text-neutral-800 not-italic">Economics</span>
+                  The Delhi University <br />
+                  <span className="text-neutral-600 not-italic">Engagements</span>
                 </h2>
               </div>
 
@@ -493,8 +494,7 @@ const HomePage = ({ setPage }) => {
               </div>
 
               <div className="flex flex-col gap-6">
-                <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7345422023134760961
-">
+                <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7345422023134760961" target="_blank" rel="noopener noreferrer">
                 <button className="group relative w-full md:w-fit px-10 py-5 bg-white text-black rounded-full overflow-hidden transition-all duration-500 hover:bg-red-600 hover:text-white">
                   <span className="relative z-10 font-bold uppercase text-[11px] tracking-[0.2em]">Subscribe to 2AM Founders —&gt;</span>
                   <div className="absolute inset-0 bg-red-600 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
@@ -646,10 +646,10 @@ const HomePage = ({ setPage }) => {
                     </div>
 
                     <div className="space-y-2 pl-4">
-                      <div className="flex items-center gap-2 text-[9px] text-neutral-600 font-mono uppercase tracking-widest italic">
+                      <div className="flex items-center gap-2 text-[11px] text-white font-mono uppercase tracking-widest italic">
                         <FiMail className="text-red-500/50" /> official@kattalyxlab.com
                       </div>
-                      <div className="flex items-center gap-2 text-[9px] text-neutral-600 font-mono uppercase tracking-widest italic">
+                      <div className="flex items-center gap-2 text-[11px] text-white font-mono uppercase tracking-widest italic">
                         <FiPhone className="text-red-500/50" /> +91 9105300307
                       </div>
                     </div>
@@ -771,17 +771,17 @@ const HomePage = ({ setPage }) => {
             <a href="https://www.instagram.com/eliteverse.solutions/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
                 <FiInstagram size={20} />
             </a>
-                        <a href="https://www.linkedin.com/company/elite-verse-solutions/?viewAsMember=true" className="hover:text-white transition-colors">
+                        <a href="https://www.linkedin.com/company/elite-verse-solutions/?viewAsMember=true" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
                 <FiLinkedin size={20} />
             </a>
           </div>
         </div>
 
         <div className="space-y-2 pl-4">
-          <div className="flex items-center gap-2 text-[9px] text-neutral-600 font-mono uppercase tracking-widest italic">
+          <div className="flex items-center gap-2 text-[11px] text-white font-mono uppercase tracking-widest italic">
             <FiMail className="text-red-500/50" /> official@eliteversesolutions.com
           </div>
-          <div className="flex items-center gap-2 text-[9px] text-neutral-600 font-mono uppercase tracking-widest italic">
+          <div className="flex items-center gap-2 text-[11px] text-white font-mono uppercase tracking-widest italic">
             <FiPhone className="text-red-500/50" /> +91 9105300307
           </div>
         </div>
@@ -802,13 +802,13 @@ const HomePage = ({ setPage }) => {
                       <span className="w-1 h-1 bg-neutral-800 rounded-full"></span>
                       <span className="text-red-500/60 font-bold italic">Currently Dormant</span>
                     </div>
-                    <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl italic text-neutral-500 group-hover:text-white transition-colors duration-700">
-                      Aahaar Nirvana <span className="text-xs not-italic font-sans opacity-20 ml-2">Food-Tech</span>
+                    <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-6xl italic text-white group-hover:text-red-400 transition-colors duration-700">
+                      Aahaar Nirvana <span className="text-xs not-italic font-sans opacity-40 ml-2">Food-Tech</span>
                     </h3>
-                    <p className="text-neutral-600 text-sm font-medium uppercase tracking-tighter">Founder</p>
+                    <p className="text-neutral-400 text-sm font-medium uppercase tracking-tighter">Founder</p>
                   </div>
 
-                  <p className="text-neutral-500 font-light leading-relaxed italic text-lg border-l border-white/5 pl-6">
+                  <p className="text-neutral-300 font-light leading-relaxed text-lg border-l-2 border-red-500/30 pl-6">
                     "Empowering the silent culinary experts of our homes. Aahaar Nirvana proved that the most authentic dining experiences aren't found in restaurants—they're right next door."
                   </p>
 
@@ -825,22 +825,22 @@ const HomePage = ({ setPage }) => {
                 <div className="lg:col-span-7 relative overflow-hidden bg-neutral-900/10 border border-dashed border-white/10 rounded-[3rem] p-8 md:p-12 backdrop-blur-[2px] group-hover:border-white/20 transition-all duration-700">
                   <div className="space-y-8 relative z-10">
                     <div>
-                      <h4 className="text-white/40 text-[10px] uppercase tracking-widest font-bold mb-6 italic">The Problem & Impact</h4>
-                      <p className="text-sm text-neutral-500 font-light leading-relaxed italic">
+                      <h4 className="text-red-500 text-[10px] uppercase tracking-widest font-bold mb-6">The Problem & Impact</h4>
+                      <p className="text-sm text-neutral-300 font-light leading-relaxed">
                         Millions of homemakers possess elite culinary skills but lack the platform to monetize them. We solved this by building a hyper-local, dual-sided marketplace that connected them with urban dwellers craving "Ghar ka Khaana." We successfully validated the demand through grassroots onboarding in Ghaziabad, managing the full stack from tech to logistics.
                       </p>
                     </div>
 
                     <div className="pt-6 border-t border-white/5 grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="p-5 rounded-2xl bg-white/2 border border-white/5">
-                        <p className="text-white/30 text-[8px] uppercase tracking-tighter mb-2 font-bold italic">The Shift</p>
-                        <p className="text-xs text-neutral-500 italic leading-relaxed">
+                      <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
+                        <p className="text-red-400 text-[8px] uppercase tracking-tighter mb-2 font-bold">The Shift</p>
+                        <p className="text-xs text-neutral-300 leading-relaxed">
                           While the MVP proved the unit economics, operations were paused to apply these marketplace learnings to the education sector with Kattalyx Labs.
                         </p>
                       </div>
-                      <div className="p-5 rounded-2xl bg-white/2 border border-white/5">
-                        <p className="text-white/30 text-[8px] uppercase tracking-tighter mb-2 font-bold italic">Learning Gained</p>
-                        <ul className="text-[10px] text-neutral-600 space-y-1 font-mono uppercase tracking-tight">
+                      <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
+                        <p className="text-red-400 text-[8px] uppercase tracking-tighter mb-2 font-bold">Learning Gained</p>
+                        <ul className="text-[10px] text-neutral-300 space-y-1 font-mono uppercase tracking-tight">
                           <li>• Trust-Based Vendor Onboarding</li>
                           <li>• Hyper-Local Delivery Logic</li>
                           <li>• Community-Led Growth Hacks</li>

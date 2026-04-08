@@ -40,12 +40,14 @@ const HeroSection = () => {
 
             {/* Contact Badge (More Compact) */}
             <a
-              href="mailto:connect@vanshjain.in"
+              href="https://mail.google.com/mail/?view=cm&to=connect@vanshjain.in"
+              target="_blank"
+              rel="noopener noreferrer"
               className="absolute -bottom-3 -left-3 bg-[#0a0a0a] border border-white/10 px-3 py-2 rounded-lg z-20 shadow-2xl hover:border-red-500/30 transition-colors group/badge"
             >
               <p className="text-[8px] text-neutral-500 uppercase tracking-widest leading-none">Connect</p>
               <p className="text-[11px] text-white font-bold tracking-tight mt-1">
-                connect@vansh.me <span className="text-red-500 group-hover/badge:translate-x-1 inline-block transition-transform">→</span>
+                connect@vanshjain.in<span className="text-red-500 group-hover/badge:translate-x-1 inline-block transition-transform">→</span>
               </p>
             </a>
           </div>

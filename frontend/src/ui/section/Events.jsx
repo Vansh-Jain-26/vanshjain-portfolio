@@ -36,9 +36,43 @@ const eventsData = [
 ];
 
 const uniEventsData = [
-  { id: "uni-1", title: "AI & LinkedIn Masterclass", school: "Delhi University", date: "July 14, 2025", audience: "150 Students", rating: "9.5", tag: "AI & Branding", imgUrl: DU1, venue: "Baraut, Baghpat, UP", facilitators: "Vansh Jain, Pushpak Goel", summary: "Comprehensive masterclass focused on AI and Personal Branding on LinkedIn for university students.", objectives: ["Enhanced AI concepts.", "LinkedIn networking skills.", "Future career awareness."] },
+  { 
+    id: "uni-1", 
+    title: "Founder's Dialogue: Execution vs Theory", 
+    school: "Delhi University (DSE)", 
+    date: "July 14, 2025", 
+    audience: "MBA IB Cohort", 
+    rating: "9.8", 
+    tag: "Entrepreneurship", 
+    imgUrl: DU3, 
+    venue: "North Campus, DSE", 
+    facilitators: "Vansh Jain, Kamal Girdhar", 
+    summary: "An immersive session at MBA IB, Department of Commerce, focused on decoding the nuances of real-world building and the intent required to scale beyond academic theory.", 
+    objectives: [
+      "Entrepreneurial Ownership.", 
+      "Execution-First Mindset.", 
+      "Venture Execution & Scaling."
+    ] 
+  },
   
-  { id: "uni-2", title: "AI & LinkedIn Masterclass", school: "Delhi University", date: "July 14, 2025", audience: "150 Students", rating: "9.5", tag: "AI & Branding", imgUrl: DU1, venue: "Baraut, Baghpat, UP", facilitators: "Vansh Jain, Pushpak Goel", summary: "Comprehensive masterclass focused on AI and Personal Branding on LinkedIn for university students.", objectives: ["Enhanced AI concepts.", "LinkedIn networking skills.", "Future career awareness."] },
+  { 
+    id: "uni-2", 
+    title: "AI Bootcamp: Vertex AI & Google Agent Kit", 
+    school: "KITE Institution", 
+    date: "July 14, 2025", 
+    audience: "Developers & AI Enthusiasts", 
+    rating: "9.9", 
+    tag: "Generative AI", 
+    imgUrl: Event15, 
+    venue: "Innovation Hub", 
+    facilitators: "Vansh Jain", 
+    summary: "Recipient of the KITE Institution Event Speaking Award for delivering an intensive bootcamp on building autonomous agents using Vertex AI and Google Agent Kit.", 
+    objectives: [
+      "Vertex AI Implementation.", 
+      "Building with Google Agent Kit.", 
+      "Practical Entrepreneurship Insights."
+    ] 
+  }
 ];
 
 // --- Sub-Component for the Grid ---

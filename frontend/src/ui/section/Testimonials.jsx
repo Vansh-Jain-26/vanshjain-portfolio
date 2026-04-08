@@ -31,7 +31,7 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 text-white overflow-hidden relative">
+    <section className="py-20 md:pt-28 text-white overflow-hidden relative">
       {/* Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-red-600/5 blur-[100px] pointer-events-none" />
 
@@ -76,7 +76,7 @@ const TestimonialCarousel = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="min-w-[300px] md:min-w-[360px] max-w-[360px] snap-start relative p-7 md:p-9 bg-[#0A0A0A] border border-white/5 rounded-[2rem] group flex flex-col justify-between"
+              className="min-w-[300px] md:min-w-90 max-w-[360px] snap-start relative p-7 md:p-9 bg-[#0A0A0A] border border-white/5 rounded-[2rem] group flex flex-col justify-between"
             >
               <div className="absolute inset-0 bg-linear-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem]" />
 

@@ -276,7 +276,7 @@ const CoursesPage = () => {
 
       <DesignProcess />
 
-      <section className="py-32 px-8 md:px-20 bg-[#0a0a0a] relative">
+      <section className="pb-32 px-8 md:px-20 bg-[#0a0a0a] relative">
         {/* Modern Background Accents */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-linear-to-l from-red-900/5 to-transparent pointer-events-none"></div>
 
@@ -310,25 +310,25 @@ const CoursesPage = () => {
                 className={`relative group ${i % 2 !== 0 ? 'md:mt-32' : ''}`}
               >
                 {/* Large Decorative Number (Pinterest Aesthetic) */}
-                <div className="absolute -top-12 -left-8 text-8xl font-serif text-white/3 group-hover:text-red-500/10 transition-all duration-700 italic select-none">
+                <div className="absolute -top-12 -left-8 text-9xl font-serif text-white/3 group-hover:text-red-500/10 transition-all duration-700 italic select-none">
                   0{i + 1}
                 </div>
 
                 <div className="relative z-10 space-y-6">
                   {/* Minimalist Icon Reveal */}
-                  <div className="text-red-500 opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 origin-left">
+                  <div className="text-red-500 opacity-50 group-hover:opacity-100  scale-120 group-hover:scale-130 transition-all duration-500 origin-left">
                     {val.icon}
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="uppercase tracking-[0.3em] text-[11px] font-black text-white group-hover:text-red-500 transition-colors">
+                    <h4 className="uppercase tracking-[0.3em] text-[15px] font-black text-white group-hover:text-red-500 transition-colors">
                       {val.title}
                     </h4>
 
                     {/* Custom Underline Animation */}
                     <div className="h-px w-8 bg-white/10 group-hover:w-full group-hover:bg-red-500/50 transition-all duration-700"></div>
 
-                    <p className="text-neutral-400 text-sm leading-relaxed font-light group-hover:text-neutral-200 transition-colors duration-500">
+                    <p className="text-neutral-400 text-md leading-relaxed font-light group-hover:text-neutral-200 transition-colors duration-500">
                       {val.desc}
                     </p>
                   </div>
@@ -374,10 +374,7 @@ const CoursesPage = () => {
                 <span className="absolute -bottom-2.5 left-1/2 w-0 h-px bg-linear-to-r from-transparent via-red-500 to-transparent group-hover/btn:w-full group-hover/btn:left-0 transition-all duration-700 ease-in-out"></span>
               </span>
 
-              {/* Animated Arrow Icon */}
-              <span className="inline-block transform group-hover/btn:translate-x-4 group-hover/btn:-translate-y-2 transition-transform duration-500 ease-out text-red-500 not-italic font-sans text-3xl md:text-5xl">
-                →
-              </span>
+
             </button>
           </div>
 
@@ -385,16 +382,16 @@ const CoursesPage = () => {
           {/* Social / Contact Secondary Links */}
           <div className="pt-12 flex gap-6 md:gap-10 justify-center items-center">
             {[
-              { name: 'Email', url: 'mailto:connect@vanshjain.in' },
+              { name: 'Email', url: 'https://mail.google.com/mail/?view=cm&to=connect@vanshjain.in' },
               { name: 'LinkedIn', url: 'https://www.linkedin.com/in/vansh-jain26/' },
               { name: 'Instagram', url: 'https://www.instagram.com/vansh_jain_26/' }
             ].map((platform) => (
               <a
                 key={platform.name}
                 href={platform.url}
-                target={platform.name === 'Email' ? '_self' : '_blank'}
+                target="_blank"
                 rel="noopener noreferrer"
-                className="text-[9px] uppercase tracking-[0.4em] text-neutral-600 hover:text-red-400 transition-colors duration-300 relative group/link"
+                className="text-[9px] uppercase tracking-[0.4em] text-white hover:text-red-400 transition-colors duration-300 relative group/link"
               >
                 {platform.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-red-400 group-hover/link:w-full transition-all duration-500"></span>

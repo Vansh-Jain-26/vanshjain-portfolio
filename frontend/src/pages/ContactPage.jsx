@@ -110,10 +110,10 @@ const ContactPage = () => {
               </div>
 
               {/* Socials Grid */}
-              <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 border border-white/10">
+              <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 border border-white/10 text-md">
                 {[
-                  { name: 'Instagram', icon: <FaInstagram size={16} />, link: "https://www.instagram.com/vansh_jain_26" },
-                  { name: 'LinkedIn', icon: <FaLinkedin size={16} />, link: "https://www.linkedin.com/in/vansh-jain26" }
+                  { name: 'Instagram', icon: <FaInstagram size={20} />, link: "https://www.instagram.com/vansh_jain_26" },
+                  { name: 'LinkedIn', icon: <FaLinkedin size={20} />, link: "https://www.linkedin.com/in/vansh-jain26" }
                 ].map((social) => (
                   <motion.a
                     href={social.link}
@@ -122,7 +122,7 @@ const ContactPage = () => {
                     key={social.name}
                     className="bg-[#0a0a0a] p-8 transition-colors cursor-pointer group relative overflow-hidden"
                   >
-                    <div className="mb-6 opacity-40 group-hover:opacity-100 transition-opacity">{social.icon}</div>
+                    <div className="mb-6 opacity-40 group-hover:opacity-100 transition-opacity ">{social.icon}</div>
                     <div className="flex justify-between items-center">
                       <span className="text-[9px] uppercase tracking-widest">{social.name}</span>
                       <ArrowUpRight size={12} />

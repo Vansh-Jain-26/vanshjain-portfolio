@@ -186,7 +186,7 @@ const Navigation = () => {
                 </div>
 
                 <form onSubmit={handleSubscribe} className="space-y-6 pt-4">
-                  <div className="border-b border-white/10 focus-within:border-white transition-colors pb-3">
+                  <div className="border-b border-white/10 text-white focus-within:border-white transition-colors pb-3 ">
                     <input
                       type="email" required placeholder="your@email.com"
                       value={email} onChange={(e) => setEmail(e.target.value)}

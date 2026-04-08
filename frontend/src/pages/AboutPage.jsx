@@ -200,19 +200,26 @@ const AboutPage = () => {
             <div className="max-w-xl space-y-6 text-[15px] leading-relaxed">
               <p>My speaking journey is fueled by a passion for demystifying technology and entrepreneurship for the next generation. I believe that real impact happens when practical knowledge meets an inspired mindset.</p>
               <p>Through keynotes and workshops, I aim to provide students and professionals with the mental frameworks needed to build, scale, and lead in an ever-changing digital landscape.</p>
-              <div className='flex flex-wrap gap-4'>
+              <div className='flex flex-wrap gap-8'>
 
               <div className="pt-6 border-t border-white/5">
-                <span className="text-4xl text-white font-serif">10K+</span>
+                <span className="text-4xl text-white font-serif">10000+</span>
                   <p className="text-[10px] uppercase tracking-widest mt-2">Students Impacted</p>
               </div>
                             <div className="pt-6 border-t border-white/5">
                 <span className="text-4xl text-white font-serif">20+</span>
                   <p className="text-[10px] uppercase tracking-widest mt-2">Institutions</p>
-              </div>              <div className="pt-6 border-t border-white/5">
+                </div>
+                <div className="pt-6 border-t border-white/5">
                 <span className="text-4xl text-white font-serif">25+</span>
                   <p className="text-[10px] uppercase tracking-widest mt-2">Events Delivered</p>
-              </div>
+                </div>
+
+                <div className="pt-6 border-t border-white/5">
+                  <span className="text-4xl text-white font-serif">100+</span>
+                  <p className="text-[10px] uppercase tracking-widest mt-2">Live Hours</p>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -608,7 +615,7 @@ const AboutPage = () => {
         </div>
        
         {/* SECTION 6: STARTUP JOURNEY */}
-        <div className="mb-40 px-6 md:px-20 pt-20">
+        <div className="mb-10 px-6 md:px-20 pt-20">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
 
             {/* Left Sticky Header */}
@@ -697,13 +704,13 @@ const AboutPage = () => {
                     </div>
 
                     {/* Aesthetic Visual Side-Detail */}
-                    <div className="hidden md:block w-32 h-32 rounded-2xl overflow-hidden grayscale opacity-20 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 bg-neutral-900 border border-white/5 rotate-3 group-hover:rotate-0">
+                    {/* <div className="hidden md:block w-32 h-32 rounded-2xl overflow-hidden grayscale opacity-20 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 bg-neutral-900 border border-white/5 rotate-3 group-hover:rotate-0">
                       <img
                         src={`https://images.unsplash.com/photo-${1550000000000 + (idx * 1000)}?q=80&w=200`}
                         className="w-full h-full object-cover"
                         alt="Milestone"
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               ))}
@@ -715,7 +722,7 @@ const AboutPage = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 py-20 border-y border-white/5 mb-40 text-center">
             {[
               { label: "Institutions", val: "20+" },
-              { label: "Team Size", val: "2+" },
+              { label: "Team Size", val: "20+" },
               { label: "Events Delivered", val: "25+" },
               { label: "Cities", val: "10+" },
             { label: "Student Impacted", val: "10K+" },

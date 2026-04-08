@@ -287,8 +287,12 @@ const SessionsPage = () => {
                           alt="Supporting visual"
                         />
                       </div>
-                      <div className="h-2/5 bg-neutral-50 rounded-3xl flex items-end p-4 group-hover:bg-red-50 transition-colors">
-                        <span className="text-neutral-200 group-hover:text-red-300 text-4xl font-serif">0{i + 1}</span>
+                      <div className="h-2/5 w-5/5 bg-neutral-50 rounded-3xl flex items-end  group-hover:bg-red-50 overflow-hidden transition-all duration-700">
+                        <img
+                          src={item.sideImg}
+                          className="w-full h-full object-cover transition-all duration-700"
+                          alt="Supporting visual"
+                        />
                       </div>
                     </div>
                   </div>

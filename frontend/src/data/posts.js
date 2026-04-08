@@ -27,7 +27,7 @@ export const posts = [
       Instagram: <a href="https://www.instagram.com/vansh_jain_26/" target="_blank">https://www.instagram.com/vansh_jain_26/</a><br>
       LinkedIn: <a href="https://www.linkedin.com/in/vansh-jain26/" target="_blank">https://www.linkedin.com/in/vansh-jain26/</a></p>
     `,
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000"
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1000"
   },
   {
     id: 2,
@@ -136,7 +136,7 @@ export const posts = [
       Email: <a href="mailto:connect@vansh.me">connect@vansh.me</a><br>
       LinkedIn: <a href="https://www.linkedin.com/in/vansh-jain26/" target="_blank">Vansh Jain</a></p>
     `,
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000"
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000"
   }, {
     id: 6,
     title: "How to Find Your Ikigai and Actually Build a Career Around It",
@@ -198,7 +198,7 @@ export const posts = [
       Email: <a href="mailto:connect@vansh.me">connect@vansh.me</a><br>
       Instagram: <a href="https://www.instagram.com/vansh_jain_26/" target="_blank">@vansh_jain_26</a></p>
     `,
-    image: "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=1000"
+    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=1000"
   },
   {
     id: 8,
@@ -255,7 +255,7 @@ export const posts = [
       Email: <a href="mailto:connect@vansh.me">connect@vansh.me</a><br>
       Instagram: <a href="https://www.instagram.com/vansh_jain_26/" target="_blank">@vansh_jain_26</a></p>
     `,
-    image: "https://images.unsplash.com/photo-1454165833968-0e71584bb303?q=80&w=1000"
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1000"
   },
   {
     id: 10,
@@ -328,7 +328,7 @@ export const posts = [
       Email: <a href="mailto:connect@vansh.me">connect@vansh.me</a><br>
       LinkedIn: <a href="https://www.linkedin.com/in/vansh-jain26/" target="_blank">Vansh Jain</a></p>
     `,
-    image: "https://images.unsplash.com/photo-1507133750040-4a8f5700e35f?q=80&w=1000"
+    image: "https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?q=80&w=1000"
   },
   {
     id: 13,
@@ -400,7 +400,7 @@ export const posts = [
       <hr>
       <p><strong>Connect for Strategy:</strong> <a href="mailto:connect@vansh.me">connect@vansh.me</a></p>
     `,
-    image: "https://images.unsplash.com/photo-1454165833968-0e71584bb303?q=80&w=1000"
+    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1000"
   },
   {
     id: 16,

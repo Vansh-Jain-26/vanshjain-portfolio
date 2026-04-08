@@ -21,7 +21,7 @@ const Footer = () => {
     },
     {
       icon: IoMailOutline,
-      link: "mailto:connect@vanshjain.in",
+      link: "https://mail.google.com/mail/?view=cm&to=connect@vanshjain.in",
       label: "Email"
     },
   ];
@@ -49,12 +49,12 @@ const Footer = () => {
             </p>
 
             <p className="text-neutral-500 leading-relaxed max-w-md text-xs">
-              Founder @<a href="https://kattalyxlabs.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Founder & CEO at Kattalyx Labs Pvt Ltd</a> |
-              Founder @<a href="https://eliteversesolutions.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors ml-1">Founder & MD Elite Verse Solutions</a>
+              @ <a href="https://kattalyxlabs.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Founder & CEO at Kattalyx Labs Pvt Ltd</a> |
+               @<a href="https://eliteversesolutions.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors ml-1">Founder & MD Elite Verse Solutions Pvt Ltd</a>
             </p>
 
             <div className="pt-4">
-              <a href="mailto:connect@vanshjain.in" className="group flex items-center gap-2 text-white hover:text-red-500 transition-colors">
+              <a href="https://mail.google.com/mail/?view=cm&to=connect@vanshjain.in" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 text-white hover:text-red-500 transition-colors">
                 <span className="text-xs font-mono tracking-wider">connect@vanshjain.in</span>
                 <div className="h-px w-0 group-hover:w-8 bg-red-500 transition-all duration-300"></div>
               </a>
