@@ -34,11 +34,17 @@ const SessionsPage = () => {
 
   // Sample Data Structures
   const stats = [
-    { label: "Students Impacted", value: "50,000+" },
-    { label: "Cities Covered", value: "40+" },
-    { label: "Institutions", value: "150+" },
-    { label: "Live Hours", value: "500+" }
+    { label: "Students Impacted", value: "10K+" },
+    { label: "Institutions", value: "20+" },
+    { label: "Events Delivered", value: "25+" },
+    { label: "Cities", value: "10+" },
+    { label: "Live Hours", value: "100+" }
   ];
+// Students Impacted: 10K +
+//     Institutions: 20 +
+//       Events Delivered: 25 +
+//         Cities: 10 +
+//           Live Hours: 100 +
 
   const upcomingEvents = [
     {
@@ -95,7 +101,7 @@ const SessionsPage = () => {
       </section>
 
       {/* SECTION 8: STATS (Shared Component Style) */}
-      <section className="grid grid-cols-2 lg:grid-cols-4 border-b border-white/10">
+      <section className="grid grid-cols-2 lg:grid-cols-5 border-b border-white/10">
         {stats.map((stat, i) => (
           <div key={i} className="p-10 border-r border-white/10 text-center group hover:bg-white/5 transition-colors">
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl mb-2">{stat.value}</h2>
@@ -439,9 +445,11 @@ const SessionsPage = () => {
                 </Link>
 
                 {/* MEDIA KIT BUTTON */}
+                <Link to="/courses">
                 <button className="px-8 py-4 border border-white/10 text-white rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white/5 transition-all">
                   Get the Media Kit
                 </button>
+                </Link>
               </div>
             </div>
 
