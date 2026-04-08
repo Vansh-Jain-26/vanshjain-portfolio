@@ -370,10 +370,14 @@ const AboutPage = () => {
               {[1, 2, 3].map((_, idx) => (
                 <div key={idx} className="flex items-center gap-6">
                   {[
-                    "Multi-Venture Building",
-                    "Product Strategy",
-                    "Full-Stack Design",
-                    "Web & App Development"
+                    "Venture Architecting",
+                    "Product Ecosystem Strategy",
+                    "Strategic Leadership",
+                    "Public Speaking & Mentorship",
+                    "Brand Storytelling",
+                    "Growth & Scaling Operations",
+                    "Human-Centric Design",
+                    "Educational Innovation"
                   ].map((skill, i) => (
                     <div
                       key={skill}
