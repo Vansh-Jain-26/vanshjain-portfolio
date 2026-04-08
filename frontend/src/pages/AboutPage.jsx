@@ -629,12 +629,12 @@ const AboutPage = () => {
         {/* SECTION 9: STATS / NUMBERS */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 py-20 border-y border-white/5 mb-40 text-center">
             {[
-              { label: "Sessions", val: "50+" },
-              { label: "Schools", val: "12" },
-              { label: "Colleges", val: "18" },
-              { label: "Students", val: "10k+" },
-              { label: "Cities", val: "8" },
-              { label: "Exp", val: "3yrs" }
+              { label: "Institutions", val: "20+" },
+              { label: "Team Size", val: "2+" },
+              { label: "Events Delivered", val: "25+" },
+              { label: "Cities", val: "10+" },
+            { label: "Student Impacted", val: "10K+" },
+            { label: "Live Hours", val: "100+" }
             ].map((stat, i) => (
               <div key={i}>
                 <div className="text-2xl text-white font-serif mb-1">{stat.val}</div>
