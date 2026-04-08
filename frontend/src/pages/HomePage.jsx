@@ -512,7 +512,7 @@ const HomePage = ({ setPage }) => {
             </div>
 
             {/* Stats & Topics Visualization */}
-            <div className="lg:col-span-7 bg-neutral-900/10 border border-white/5 rounded-[3rem] p-8 md:p-12 relative overflow-hidden group border-white/10 transition-colors duration-700">
+            <div className="lg:col-span-7 bg-neutral-900/10 border border-white/5 rounded-[3rem] p-8 md:p-12 relative overflow-hidden group transition-colors duration-700">
               <div className="flex gap-12 mb-12 relative z-10">
                 <div>
                   <p className="text-3xl text-white font-serif italic">35%+</p>
