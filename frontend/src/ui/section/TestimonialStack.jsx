@@ -30,7 +30,7 @@ const testimonialsData = [
 
 const CardPair = ({ item }) => {
   return (
-    <div className="relative w-[320px] h-[450px] m-[-15px]">
+    <div className="relative w-[320px] h-[200px] m-[-15px]">
 
       {/* BOTTOM LAYER: The Static Message Card (Always stays there) */}
       <div className="absolute inset-0 bg-transparent border border-dashed border-white/20 rounded-2xl flex items-center justify-center p-10 text-center">
@@ -55,9 +55,9 @@ const CardPair = ({ item }) => {
       >
         <div className="flex flex-col gap-5 select-none h-full">
           {/* Image Placeholder */}
-          <div className="h-44 bg-neutral-800 rounded-xl overflow-hidden relative">
+          {/* <div className="h-44 bg-neutral-800 rounded-xl overflow-hidden relative">
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-          </div>
+          </div> */}
 
           <div>
             <h3 className="text-white font-bold text-xl mb-1">{item.name}</h3>
