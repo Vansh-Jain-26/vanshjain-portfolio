@@ -382,7 +382,7 @@ const HomePage = ({ setPage }) => {
               {/* Content Section */}
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <span className="text-red-500 text-[8px] uppercase font-bold font-sans tracking-[0.3em]">Startup Strategy</span>
+                  <span className="text-red-500 text-[8px] uppercase font-bold font-sans tracking-[0.3em]">Entrepreneurship | Startup Building</span>
                   <div className="h-px w-8 bg-white/10"></div>
                 </div>
 
@@ -390,12 +390,12 @@ const HomePage = ({ setPage }) => {
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                   className="text-2xl md:text-3xl text-white leading-tight font-light group-hover:text-red-100 transition-colors"
                 >
-                  Why Most Founders Fail at Execution <br />
-                  <span className="italic text-neutral-500 text-lg md:text-xl font-serif">(And How to Avoid It)</span>
+                  Why I Started Two Ventures While Still in College <br />
+                  <span className="italic text-neutral-500 text-lg md:text-xl font-serif">(And Why You Should Too)</span>
                 </h3>
 
                 <p className="text-neutral-500 text-sm line-clamp-2 font-sans font-light leading-relaxed">
-                  A breakdown of why perfect planning kills startups, and why speed and iteration beat perfection every time.
+                  When people ask me how I'm running two incorporated ventures while finishing my B.Tech, the honest answer is: I don't have a choice.
                 </p>
 
                 <div className="pt-2 flex items-center gap-2 text-[10px] uppercase tracking-widest text-white/40 group-hover:text-red-500 transition-colors font-bold">
@@ -423,7 +423,7 @@ const HomePage = ({ setPage }) => {
               {/* Content Section */}
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <span className="text-red-500 text-[8px] uppercase font-bold font-sans tracking-[0.3em]">Education</span>
+                  <span className="text-red-500 text-[8px] uppercase font-bold font-sans tracking-[0.3em]">Education | Student Development</span>
                   <div className="h-px w-8 bg-white/10"></div>
                 </div>
 
@@ -431,12 +431,12 @@ const HomePage = ({ setPage }) => {
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                   className="text-2xl md:text-3xl text-white leading-tight font-light group-hover:text-red-100 transition-colors"
                 >
-                  The Education System is Broken <br />
+                  The Real Reason Indian Students Are Unprepared for the Real World <br />
                   <span className="italic text-neutral-500 text-lg md:text-xl font-serif">— Here's What We're Building</span>
                 </h3>
 
                 <p className="text-neutral-500 text-sm line-clamp-2 font-sans font-light leading-relaxed">
-                  Why traditional schooling doesn't prepare students for real life. A deep dive into the Kattalyx Labs approach.
+                  I spent 15 years in the Indian education system. Scored well, got into a good college, did all the 'right things.
                 </p>
 
                 <div className="pt-2 flex items-center gap-2 text-[10px] uppercase tracking-widest text-white/40 group-hover:text-red-500 transition-colors font-bold">
