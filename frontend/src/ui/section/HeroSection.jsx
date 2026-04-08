@@ -5,7 +5,7 @@ import { HashLink } from 'react-router-hash-link';
 const HeroSection = () => {
   return (
     // PT-48 for more top padding, min-h reduced for a tighter look
-    <section className="relative w-full min-h-[85vh] lg:min-h-[80vh] bg-[#050505] text-white flex items-center justify-center pt-48 pb-16 px-6 sm:px-12 lg:px-24 overflow-hidden">
+    <section className="relative w-full min-h-[85vh] lg:min-h-[80vh] bg-[#050505] text-white flex items-center justify-center pt-36 pb-16 px-6 sm:px-12 lg:px-24 overflow-hidden">
 
       {/* Background: Modern Noise & Grid */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
@@ -67,7 +67,7 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheading & Description (Tighter spacing) */}
-          <div className="mb-8 max-w-xl">
+          <div className=" max-w-xl">
             <p className="text-red-500 font-semibold text-[10px] sm:text-xs mb-2 tracking-[0.2em] uppercase">
               Bold Ideas • Scalable Impact
             </p>
@@ -80,11 +80,12 @@ const HeroSection = () => {
           </div>
 
           {/* Impact Stats (More minimal) */}
-          <div className="flex flex-wrap justify-center lg:justify-start items-center gap-6 sm:gap-8 mb-10 py-4 border-y border-white/5 w-full lg:w-auto">
+          <div className="flex flex-wrap justify-center lg:justify-start items-center gap-6 sm:gap-8 mb-4 py-4 border-y border-white/5 w-full lg:w-auto">
             {[
               { label: 'Students Impacted', val: '10K+' },
               { label: 'Institutions', val: '20+' },
               { label: 'Events', val: '25+' },
+              { label: 'Cities', val: '10+' },
               { label: ' Newsletter Subscribers', val: '2000+' },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col">
