@@ -1,7 +1,7 @@
 import React from 'react';
 import vanshImage from '../../assets/vanshjain.webp';
 import { HashLink } from 'react-router-hash-link';
-
+import { Link } from 'react-router-dom';
 const HeroSection = () => {
   return (
     // PT-48 for more top padding, min-h reduced for a tighter look
@@ -97,9 +97,11 @@ const HeroSection = () => {
 
           {/* CTA Buttons (Clean sizing) */}
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-            <button className="w-full sm:w-auto bg-white text-black px-6 py-3 rounded-full font-bold text-[10px] uppercase tracking-widest hover:invert transition-all">
-              Let's Build Together
-            </button>
+            <Link to="/contact">
+              <button className="w-full sm:w-auto bg-white text-black px-6 py-3 rounded-full font-bold text-[10px] uppercase tracking-widest hover:invert transition-all">
+                Let's Build Together
+              </button>
+            </Link>
             <HashLink
               smooth
               to="/#venture"
