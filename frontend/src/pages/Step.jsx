@@ -69,7 +69,7 @@ const DesignProcess = () => {
         </motion.div>
 
         {/* CARDS CONTAINER */}
-        <div className="relative flex flex-col md:flex-row items-start justify-center gap-12 md:gap-8 min-h-[700px]">
+        <div className="relative flex flex-col md:flex-row items-start justify-center gap-12 md:gap-8 min-h-175">
 
           {steps.map((step, index) => (
             <motion.div
@@ -81,7 +81,7 @@ const DesignProcess = () => {
               viewport={{ once: true, amount: 0.2 }}
               whileHover={{ y: -8, transition: { duration: 0.2 } }}
               // Background changed to zinc-900 with a subtle border
-              className={`relative bg-zinc-900/50 border border-zinc-800 p-10 md:p-12 rounded-[45px] w-full md:w-[380px] shadow-[0_20px_50px_rgba(0,0,0,0.5)] ${step.rotation} ${step.translateY} z-10 backdrop-blur-sm`}
+              className={`relative bg-zinc-900/50 border border-zinc-800 p-10 md:p-12 rounded-[45px] w-full md:w-95 shadow-[0_20px_50px_rgba(0,0,0,0.5)] ${step.rotation} ${step.translateY} z-10 backdrop-blur-sm`}
             >
               {/* HOLES (Orange dots) */}
               {step.dotPosition && (
