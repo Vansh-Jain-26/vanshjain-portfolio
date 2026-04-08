@@ -639,7 +639,7 @@ const HomePage = ({ setPage }) => {
                       </a>
 
                       {/* Social Media Row */}
-                      <div className="flex gap-6 pl-4 text-neutral-500">
+                      <div className="flex gap-6 pl-4 text-white">
                         <a href="https://www.instagram.com/kattalyx.labs/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
                           <FiInstagram size={20} />
                         </a>
@@ -771,14 +771,14 @@ const HomePage = ({ setPage }) => {
           </a>
           
           {/* Social Media Row */}
-          <div className="flex gap-6 pl-4 text-neutral-500">
+          <div className="flex gap-6 pl-4 text-white">
             <a href="https://www.instagram.com/eliteverse.solutions/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
                 <FiInstagram size={20} />
             </a>
-            <a href="#" className="hover:text-white transition-colors opacity-20 cursor-not-allowed">
+                        <a href="https://www.linkedin.com/company/elite-verse-solutions/?viewAsMember=true" className="hover:text-white transition-colors">
                 <FiLinkedin size={20} />
             </a>
-            <a href="#" className="hover:text-white transition-colors opacity-20 cursor-not-allowed">
+            <a href="https://www.facebook.com/eliteversesolutions" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
                 <FiFacebook size={20} />
             </a>
           </div>
