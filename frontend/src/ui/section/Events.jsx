@@ -36,7 +36,9 @@ const eventsData = [
 ];
 
 const uniEventsData = [
-  { id: "uni-1", title: "AI & LinkedIn Masterclass", school: "Delhi University", date: "July 14, 2025", audience: "150 Students", rating: "9.5", tag: "AI & Branding", imgUrl:DU1, venue: "Baraut, Baghpat, UP", facilitators: "Vansh Jain, Pushpak Goel", summary: "Comprehensive masterclass focused on AI and Personal Branding on LinkedIn for university students.", objectives: ["Enhanced AI concepts.", "LinkedIn networking skills.", "Future career awareness."] },
+  { id: "uni-1", title: "AI & LinkedIn Masterclass", school: "Delhi University", date: "July 14, 2025", audience: "150 Students", rating: "9.5", tag: "AI & Branding", imgUrl: DU1, venue: "Baraut, Baghpat, UP", facilitators: "Vansh Jain, Pushpak Goel", summary: "Comprehensive masterclass focused on AI and Personal Branding on LinkedIn for university students.", objectives: ["Enhanced AI concepts.", "LinkedIn networking skills.", "Future career awareness."] },
+  
+  { id: "uni-2", title: "AI & LinkedIn Masterclass", school: "Delhi University", date: "July 14, 2025", audience: "150 Students", rating: "9.5", tag: "AI & Branding", imgUrl: DU1, venue: "Baraut, Baghpat, UP", facilitators: "Vansh Jain, Pushpak Goel", summary: "Comprehensive masterclass focused on AI and Personal Branding on LinkedIn for university students.", objectives: ["Enhanced AI concepts.", "LinkedIn networking skills.", "Future career awareness."] },
 ];
 
 // --- Sub-Component for the Grid ---
