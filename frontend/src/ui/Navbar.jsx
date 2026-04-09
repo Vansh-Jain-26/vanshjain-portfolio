@@ -204,7 +204,7 @@ const Navigation = () => {
                   className={`w-full py-4 font-bold rounded-2xl text-lg transition-all ${isSubscribed ? 'bg-neutral-900 text-neutral-500 border border-white/5' : 'bg-red-600 text-white hover:bg-white hover:text-black'
                     }`}
                 >
-                  {isSubscribed ? "Already Subscribed ✓" : "Join the Newsletter"}
+                  {isSubscribed ? "Already Subscribed ✓" : "Subscribe"}
                 </button>
               </motion.div>
             </nav>
