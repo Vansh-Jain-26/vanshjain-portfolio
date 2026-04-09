@@ -181,8 +181,8 @@ const Navigation = () => {
 
               <div className="text-center space-y-6">
                 <div className="space-y-2">
-                  <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl italic">Stay in the loop</h3>
-                  <p className="text-neutral-500 text-[10px] uppercase tracking-[0.3em]">Updates on Web3, Design & Entrepreneurship</p>
+                  <h3 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-4xl italic text-white">Stay in the loop</h3>
+                  <p className="text-neutral-300 text-[10px] uppercase tracking-[0.3em]">Updates on Web3, Design & Entrepreneurship</p>
                 </div>
 
                 <form onSubmit={handleSubscribe} className="space-y-6 pt-4">
@@ -190,7 +190,7 @@ const Navigation = () => {
                     <input
                       type="email" required placeholder="your@email.com"
                       value={email} onChange={(e) => setEmail(e.target.value)}
-                      className="bg-transparent w-full outline-none text-center text-xl placeholder:text-neutral-800 font-light text-white"
+                      className="bg-transparent w-full outline-none text-center text-xl placeholder:text-white/10 font-light text-white"
                     />
                   </div>
 
