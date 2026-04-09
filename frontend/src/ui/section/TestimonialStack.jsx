@@ -4,26 +4,26 @@ import { motion } from 'framer-motion';
 const testimonialsData = [
   {
     id: 1,
-    name: "Darshan Purani",
-    role: "Design Lead @OTPless",
-    text: "I've worked with Abhi since the early days... an absolute design ninja.",
-    bgMessage: "Currently working with her at Loco.",
+    // name: "Kamal Girdhar",
+    // role: "Founder @ Wealth Makers",
+    text: "Conducting the DSE session alongside Vansh was phenomenal. His ability to distill complex 'Venture Architecture' into actionable steps for MBA students is a rare trait in today's founder ecosystem.",
+    bgMessage: "Co-Speaker at Delhi University Session",
     rotate: -3,
   },
   {
     id: 2,
-    name: "Kinjal Kanzariya",
-    role: "Founder @Navchitra.design",
-    text: "Working with Abhishek has been an inspiring experience... bold ideas with confidence.",
-    bgMessage: "Met at the Design Conference '25",
+    // name: "Alumni Relations Committee",
+    // role: "MBA IB, Delhi School of Economics",
+    text: "Kattalyx Labs brought a raw, high-energy perspective to our campus. The session went beyond theory, sparking real conversations about ownership and the 'Execution-First' mindset that our students needed.",
+    bgMessage: "DSE Commerce Department Collaboration",
     rotate: 2,
   },
   {
     id: 3,
-    name: "Nitish Sahu",
-    role: "Founder at Remode",
-    text: "Abhishek's collaborative spirit and pixel-perfect iterations elevated our campaigns.",
-    bgMessage: "Collaborated on 3+ FinTech projects.",
+    // name: "Vansh Jain",
+    // role: "Founder & CEO @ Kattalyx Labs",
+    text: "Entrepreneurship starts the moment you decide to take ownership. Seeing the intent and bold perspectives at DU North Campus confirms that the next wave of builders is ready to lead.",
+    bgMessage: "Visionary behind the DU Seminar Spotlight",
     rotate: -1,
   }
 ];
