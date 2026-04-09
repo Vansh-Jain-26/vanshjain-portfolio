@@ -168,7 +168,7 @@ const KattalyxLabsPage = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((p, i) => (
-              <div key={i} className="group bg-neutral-900/20 border border-white/5 rounded-[2rem] hover:border-red-500/20 hover:bg-neutral-900/40 transition-all duration-500 overflow-hidden flex flex-col">
+              <div key={i} className="group bg-neutral-900/20 border border-white/5 rounded-4xl hover:border-red-500/20 hover:bg-neutral-900/40 transition-all duration-500 overflow-hidden flex flex-col">
                 <div className="relative aspect-video overflow-hidden">
                   <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
                   <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors" />
