@@ -98,7 +98,7 @@ const Navigation = () => {
             ))}
 
             {/* Company Work Dropdown */}
-            <div className="relative" ref={dropdownRef}>
+            {/* <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setCompanyDropdown(!companyDropdown)}
                 className={`relative px-1 py-1 text-[12px] font-medium transition-colors duration-300 flex items-center gap-1 ${
@@ -133,7 +133,7 @@ const Navigation = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </div> */}
 
             {/* Conditional Desktop Button */}
             {isSubscribed ? (
