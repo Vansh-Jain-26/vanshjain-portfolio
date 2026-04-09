@@ -38,9 +38,9 @@ const eventsData = [
 const uniEventsData = [
   { 
     id: "uni-1", 
-    title: "Founder's Dialogue: Execution vs Theory", 
+    title: "Entrepreneurship Unplugged: From Idea to Execution", 
     school: "Delhi University (DSE)", 
-    date: "July 14, 2025", 
+    date: "April 1, 2026", 
     audience: "MBA IB Cohort", 
     rating: "9.8", 
     tag: "Entrepreneurship", 
