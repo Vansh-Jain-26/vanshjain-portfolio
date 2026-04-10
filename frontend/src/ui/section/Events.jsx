@@ -75,8 +75,19 @@ const uniEventsData = [
   }
 ];
 
+// --- Helper: parse date string to Date object ---
+const parseDate = (dateStr) => new Date(dateStr);
+
 // --- Sub-Component for the Grid ---
-const EventGrid = ({ title, events, onSelect }) => (
+const EventGrid = ({ title, events, onSelect }) => {
+  const [showAll, setShowAll] = useState(false);
+  const INITIAL_COUNT = 6;
+
+  const sorted = [...events].sort((a, b) => parseDate(b.date) - parseDate(a.date));
+  const visible = showAll ? sorted : sorted.slice(0, INITIAL_COUNT);
+  const hasMore = sorted.length > INITIAL_COUNT;
+
+  return (
   <div className="mb-24">
     <div className="flex flex-col lg:flex-row justify-between items-end gap-12 mb-16 border-b border-white/5 pb-10">
       <div className="space-y-4">
@@ -88,7 +99,7 @@ const EventGrid = ({ title, events, onSelect }) => (
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-      {events.map((event) => (
+      {visible.map((event) => (
         <motion.div
           key={event.id}
           layoutId={`card-${event.id}`}
@@ -116,8 +127,21 @@ const EventGrid = ({ title, events, onSelect }) => (
         </motion.div>
       ))}
     </div>
+
+    {hasMore && (
+      <div className="flex justify-center mt-14">
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="group flex items-center gap-3 px-10 py-4 border border-white/10 rounded-full text-[11px] uppercase tracking-widest text-neutral-400 hover:bg-white hover:text-black transition-all duration-300 font-bold"
+        >
+          {showAll ? 'Show Less' : `View More Events (${sorted.length - INITIAL_COUNT} more)`}
+          <span className={`transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`}>↓</span>
+        </button>
+      </div>
+    )}
   </div>
-);
+  );
+};
 
 // --- Main Component ---
 export default function Events() {
@@ -130,7 +154,7 @@ export default function Events() {
   }, [selectedEvent]);
 
   return (
-    <section className="py-24 bg-[#050505] text-white font-sans min-h-screen">
+    <section id="events" className="py-24 bg-[#050505] text-white font-sans min-h-screen">
       <div className="max-w-7xl mx-auto px-6 md:px-20">
         <AnimatePresence mode="wait">
           {!selectedEvent ? (
