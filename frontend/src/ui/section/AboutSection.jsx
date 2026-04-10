@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Eye, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import Event1 from '../../assets/events/Event1.webp';
 import Event16 from '../../assets/events/Event16.webp';
 
@@ -118,32 +119,42 @@ const AboutSection = () => {
           </p>
         </div>
 
-        {/* 7. CTA Button (Frosted Glass Effect) */}
-        <div className="relative mt-15 group">
-            <Link
-              to="/about"
-              className="absolute inset-0 z-20 cursor-pointer"
-              aria-label="Read more about me"
-            />
+        {/* 7. CTA Buttons */}
+        <div className="relative mt-15 flex flex-col sm:flex-row items-center gap-4">
 
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="relative z-10 flex items-center gap-6 bg-white/5 backdrop-blur-lg text-white border border-white/10 px-6 py-3 rounded-full font-bold text-[11px] uppercase tracking-[0.3em] transition-all group-hover:bg-white group-hover:text-black group-hover:border-white overflow-hidden shadow-2xl"
-            >
-              Read more about me
-              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-black/10 transition-colors">
-                <ArrowRight size={16} />
-              </div>
-            </motion.button>
+            {/* Read More Button */}
+            <div className="relative group">
+              <Link to="/about" className="absolute inset-0 z-20 cursor-pointer" aria-label="Read more about me" />
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="relative z-10 flex items-center gap-6 bg-white/5 backdrop-blur-lg text-white border border-white/10 px-6 py-3 rounded-full font-bold text-[11px] uppercase tracking-[0.3em] transition-all group-hover:bg-white group-hover:text-black group-hover:border-white overflow-hidden shadow-2xl"
+              >
+                Read more about me
+                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-black/10 transition-colors">
+                  <ArrowRight size={16} />
+                </div>
+              </motion.button>
+              <div className="absolute inset-0 bg-white/20 blur-3xl opacity-0 group-hover:opacity-30 transition-opacity -z-10" />
+            </div>
 
-            {/* Subtle Glow behind button */}
-            <div className="absolute inset-0 bg-white/20 blur-3xl opacity-0 group-hover:opacity-30 transition-opacity -z-10" />
+            {/* Speaking Engagements Button */}
+            <div className="relative group">
+              <HashLink smooth to="/speaker-sessions#events" className="absolute inset-0 z-20 cursor-pointer" aria-label="Speaking Engagements" />
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="relative z-10 flex items-center gap-6 bg-red-600/10 backdrop-blur-lg text-red-400 border border-red-500/20 px-6 py-3 rounded-full font-bold text-[11px] uppercase tracking-[0.3em] transition-all group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 overflow-hidden shadow-2xl"
+              >
+                Speaking Engagements
+                <div className="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                  <ArrowRight size={16} />
+                </div>
+              </motion.button>
+              <div className="absolute inset-0 bg-red-500/10 blur-3xl opacity-0 group-hover:opacity-30 transition-opacity -z-10" />
+            </div>
+
           </div>
-
-          {/* Subtle Glow behind button */}
-          <div className="absolute inset-0 bg-white/20 blur-3xl opacity-0 group-hover:opacity-30 transition-opacity -z-10" />
-        </div>
 
 
 
@@ -151,8 +162,9 @@ const AboutSection = () => {
       <p className="mt-auto pt-20 text-neutral-600 text-[9px] tracking-[0.5em] uppercase font-medium opacity-50">
         Interact with the elements
       </p>
+      </div>
     </section>
   );
-};
 
+};
 export default AboutSection;
