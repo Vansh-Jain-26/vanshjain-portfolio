@@ -738,8 +738,8 @@ const AboutPage = () => {
             { label: "Live Hours", val: "100+" }
             ].map((stat, i) => (
               <div key={i}>
-                <div className="text-2xl text-white font-serif mb-1">{stat.val}</div>
-                <div className="text-[9px] uppercase tracking-widest text-neutral-600">{stat.label}</div>
+                <div className="text-4xl text-white font-serif mb-1">{stat.val}</div>
+                <div className="text-[11px] uppercase tracking-widest text-neutral-600">{stat.label}</div>
               </div>
             ))}
         </div>
