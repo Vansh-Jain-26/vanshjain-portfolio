@@ -1,5 +1,6 @@
 import React from 'react';
-import { FiArrowUpRight, FiInstagram, FiLinkedin, FiMail, FiPhone } from 'react-icons/fi';
+import { FiArrowUpRight, FiInstagram, FiLinkedin, FiMail, FiPhone, FiGlobe } from 'react-icons/fi';
+import { SiWordpress, SiShopify, SiFigma, SiReact, SiNextdotjs } from 'react-icons/si';
 
 const projects = [
   {
@@ -132,6 +133,74 @@ const EliteVersePage = () => {
                 <p className="text-white font-bold text-sm uppercase tracking-wider">{s}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GLOBAL REACH */}
+      <section className="py-24 px-8 md:px-20 border-b border-white/5 bg-[#050505]">
+        <div className="max-w-7xl mx-auto">
+          <span className="text-red-500 font-mono text-[10px] uppercase tracking-[0.6em] font-bold block mb-4">Global Impact</span>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif" }} className="text-5xl md:text-7xl italic leading-none tracking-tighter mb-4">
+            500+ <span className="text-neutral-700 not-italic">Projects</span>
+          </h2>
+          <p className="text-neutral-400 text-sm font-light mb-16 max-w-xl">Completed across tech, designing & marketing — delivered to clients worldwide.</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+            {/* Tech Stack */}
+            <div className="space-y-6">
+              <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 font-bold border-b border-white/5 pb-3">Technologies & Tools</p>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { icon: <SiWordpress size={16} />, name: 'WordPress' },
+                  { icon: <SiShopify size={16} />, name: 'Shopify' },
+                  { icon: <SiFigma size={16} />, name: 'Figma' },
+                  { icon: <SiReact size={16} />, name: 'UI Design' },
+                  { icon: <SiNextdotjs size={16} />, name: 'Graphic Design' },
+                  { icon: <FiGlobe size={16} />, name: 'Logo Design' },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 px-4 py-2.5 bg-white/5 border border-white/5 rounded-xl hover:border-red-500/30 hover:bg-white/10 transition-all group">
+                    <span className="text-neutral-400 group-hover:text-white transition-colors">{item.icon}</span>
+                    <span className="text-[10px] uppercase tracking-wider text-neutral-400 group-hover:text-white transition-colors font-bold">{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Categories */}
+            <div className="space-y-6">
+              <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 font-bold border-b border-white/5 pb-3">Work Categories</p>
+              <div className="space-y-3">
+                {[
+                  ['Tech', '200+', 'Web, App, ERP'],
+                  ['Designing', '180+', 'UI, Graphic, Logo, Brand'],
+                  ['Marketing', '120+', 'SEO, Ads, Social, Content'],
+                ].map(([cat, count, sub]) => (
+                  <div key={cat} className="flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-2xl hover:border-red-500/20 transition-all">
+                    <div>
+                      <p className="text-white font-bold text-sm">{cat}</p>
+                      <p className="text-neutral-500 text-[9px] uppercase tracking-wider">{sub}</p>
+                    </div>
+                    <span className="text-2xl font-serif italic text-red-500">{count}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Countries */}
+            <div className="space-y-6">
+              <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500 font-bold border-b border-white/5 pb-3">Countries Served</p>
+              <div className="flex flex-wrap gap-3">
+                {['UK', 'USA', 'Canada', 'France', 'Philippines', 'Dubai', 'Europe', 'India'].map((c, i) => (
+                  <div key={i} className="flex items-center gap-2 px-4 py-2.5 bg-white/5 border border-white/5 rounded-xl hover:border-red-500/30 hover:bg-white/10 transition-all group">
+                    <FiGlobe size={14} className="text-red-500 group-hover:text-white transition-colors" />
+                    <span className="text-[10px] uppercase tracking-wider text-neutral-400 group-hover:text-white transition-colors font-bold">{c}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
